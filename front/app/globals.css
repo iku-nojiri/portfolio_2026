@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Surfaces */
+  --color-background: #F8F9FA;
+  --color-card: #FFFFFF;
+  --color-popover: #FFFFFF;
+  --color-muted: #E8EAED;
+  /* Brand */
+  --color-primary: #155DFC;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #E8EAF6;
+  --color-secondary-foreground: #202124;
+  --color-accent: #E8F0FE;
+  --color-accent-foreground: #183DB2;
+  --color-destructive: #D93025;
+  --color-destructive-foreground: #FFFFFF;
+  /* Text */
+  --color-foreground: #202124;
+  --color-muted-foreground: #5F6368;
+  /* System UI */
+  --color-outline: #0000001F;
+  --color-focus: #155DFC;
+  --color-input-background: #F1F3F4;
+  --color-switch-background: #BDC1C6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  /* Surfaces */
+  --color-background: #0F172A;
+  --color-card: #1E293B;
+  --color-popover: #1E293B;
+  --color-muted: #334155;
+  /* Brand */
+  --color-primary: #5993FF;
+  --color-primary-foreground: #05113A;
+  --color-secondary: #262626;
+  --color-secondary-foreground: #FAFAFA;
+  --color-accent: #0E1E47;
+  --color-accent-foreground: #8EBAFF;
+  --color-destructive: #82181A;
+  --color-destructive-foreground: #FFFFFF;
+  /* Text */
+  --color-foreground: #F1F5F9;
+  --color-muted-foreground: #94A3B8;
+  /* System UI */
+  --color-outline: #334155;
+  --color-focus: #5993FF;
+  --color-input-background: #F1F3F4;
+  --color-switch-background: #BDC1C6;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Base styles */
+@layer base {
+  * {
+    @apply border-outline;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+  }
 }
