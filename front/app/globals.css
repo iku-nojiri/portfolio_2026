@@ -26,7 +26,7 @@
   --color-input-background: #F1F3F4;
   --color-switch-background: #BDC1C6;
   /* font-family */
-  --font--roboto-flex: var(--font-roboto-flex);
+  --font-roboto-flex: var(--font-roboto-flex);
   --font-noto-sans-jp: var(--font-noto-sans-jp);
 }
 
@@ -62,6 +62,6 @@
   }
 
   body {
-    @apply bg-background text-foreground font-noto-sans-jp;
+    @apply bg-background font-noto-sans-jp;
   }
 }
