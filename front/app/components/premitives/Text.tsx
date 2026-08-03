@@ -12,9 +12,9 @@ const variants = tv({
       bold: "font-extrabold",
     },
     size: {
-      sm: "text-sm",
-      md: "text-base",
-      lg: "text-lg",
+      large: "text-lg",     // 18px
+      medium: "text-base",  // 16px
+      small: "text-sm",     // 14px
     },
     color: {
       default: "text-fg",
@@ -24,7 +24,7 @@ const variants = tv({
   defaultVariants: {
     lang: "jp",
     weight: "normal",
-    size: "md",
+    size: "medium",
     color: "default" 
   }
 });
