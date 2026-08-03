@@ -4,55 +4,98 @@
 
 @theme {
   /* Surfaces */
-  --color-background: #F8F9FA;
+  --color-bg: #F8F9FA;
   --color-card: #FFFFFF;
   --color-popover: #FFFFFF;
   --color-muted: #E8EAED;
+
+  /* Text */
+  --color-fg: #202124;
+  --color-muted-fg: #5F6368;
+
   /* Brand */
   --color-primary: #155DFC;
-  --color-primary-foreground: #FFFFFF;
+  --color-primary-fg: #FFFFFF;
   --color-secondary: #E8EAF6;
-  --color-secondary-foreground: #202124;
+  --color-secondary-fg: #202124;
   --color-accent: #E8F0FE;
-  --color-accent-foreground: #183DB2;
+  --color-accent-fg: #183DB2;
   --color-destructive: #D93025;
-  --color-destructive-foreground: #FFFFFF;
-  /* Text */
-  --color-foreground: #202124;
-  --color-muted-foreground: #5F6368;
+  --color-destructive-fg: #FFFFFF;
+
+  /* Button */
+  --color-button-primary-fg: #FFFFFF;
+  --color-button-primary-bg: #155DFC;
+  --color-button-primary-bg--hover: #155DFCE5;
+
+  --color-button-secondary-fg: #030213;
+  --color-button-secondary-bg: #ECEEF2;
+  --color-button-secondary-bg--hover: #ECEEF2CC;
+
+  --color-button-outline-fg: #0A0A0A;
+  --color-button-outline-fg--hover: #183DB2;
+  --color-button-outline-bg: transparent;
+  --color-button-outline-bg--hover: #F0F3FF;
+
+  --color-button-ghost-fg: #0A0A0A;
+  --color-button-ghost-bg: transparent;
+  --color-button-ghost-bg--hover: #F0F3FF;
+
   /* System UI */
   --color-outline: #0000001F;
   --color-focus: #155DFC;
-  --color-input-background: #F1F3F4;
-  --color-switch-background: #BDC1C6;
-  /* font-family */
+  --color-input-bg: #F1F3F4;
+  --color-switch-bg: #BDC1C6;
+
+  /* Font */
   --font-roboto-flex: var(--font-roboto-flex);
   --font-noto-sans-jp: var(--font-noto-sans-jp);
 }
 
 .dark {
   /* Surfaces */
-  --color-background: #0F172A;
+  --color-bg: #0F172A;
   --color-card: #1E293B;
   --color-popover: #1E293B;
   --color-muted: #334155;
+
+  /* Text */
+  --color-fg: #F1F5F9;
+  --color-muted-fg: #94A3B8;
+
   /* Brand */
   --color-primary: #5993FF;
-  --color-primary-foreground: #05113A;
+  --color-primary-fg: #05113A;
   --color-secondary: #262626;
-  --color-secondary-foreground: #FAFAFA;
+  --color-secondary-fg: #FAFAFA;
   --color-accent: #0E1E47;
-  --color-accent-foreground: #8EBAFF;
+  --color-accent-fg: #8EBAFF;
   --color-destructive: #82181A;
-  --color-destructive-foreground: #FFFFFF;
-  /* Text */
-  --color-foreground: #F1F5F9;
-  --color-muted-foreground: #94A3B8;
+  --color-destructive-fg: #FFFFFF;
+
+  /* Button */
+  --color-button-primary-fg: #05113A;
+  --color-button-primary-bg: #5993FF;
+  --color-button-primary-bg--hover: #5993FFE5;
+
+  --color-button-secondary-fg: #FAFAFA;
+  --color-button-secondary-bg: #262626;
+  --color-button-secondary-bg--hover: #262626CC;
+
+  --color-button-outline-fg: #F1F5F9;
+  --color-button-outline-fg--hover: #8EBAFF;
+  --color-button-outline-bg: #3341554D;
+  --color-button-outline-bg--hover: #0E1E47;
+
+  --color-button-ghost-fg: #F1F5F9;
+  --color-button-ghost-bg: transparent;
+  --color-button-ghost-bg--hover: #0E1E47;
+
   /* System UI */
   --color-outline: #334155;
   --color-focus: #5993FF;
-  --color-input-background: #F1F3F4;
-  --color-switch-background: #BDC1C6;
+  --color-input-bg: #F1F3F4;
+  --color-switch-bg: #BDC1C6;
 }
 
 /* Base styles */
@@ -62,6 +105,6 @@
   }
 
   body {
-    @apply bg-background font-noto-sans-jp;
+    @apply bg-bg font-noto-sans-jp;
   }
 }

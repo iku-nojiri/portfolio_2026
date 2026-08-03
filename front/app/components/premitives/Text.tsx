@@ -1,14 +1,12 @@
-import { ReactNode } from "react";
-import { tv } from "tailwind-variants"
+import { ElementType, ReactNode, ComponentProps } from "react";
+import { tv } from "tailwind-variants";
+import { typograhyVariants } from "./shared/variants/typograhyVariants";
 import type { VariantProps } from "tailwind-variants";
 
-const style = tv({
+const variants = tv({
+  extend: typograhyVariants,
   base: "leading-6",
   variants: {
-    lang: {
-      en: "font-roboto-flex",
-      jp: "font-noto-sans-jp",
-    },
     weight: {
       normal: "font-normal",
       bold: "font-extrabold",
@@ -19,29 +17,29 @@ const style = tv({
       lg: "text-lg",
     },
     color: {
-      default: "text-foreground",
-      muted: "text-muted-foreground",
+      default: "text-fg",
+      muted: "text-muted-fg",
     },
   },
   defaultVariants: {
     lang: "jp",
     weight: "normal",
     size: "md",
-    color: "default"
+    color: "default" 
   }
-})
+});
 
-type Props = VariantProps<typeof style> & {
-  as?: "p" | "span" | "strong" | "em" | "small" | "label" | "time",
-  className?: string
-  children: ReactNode,
-};
+type TextProps<T extends ElementType> = VariantProps<typeof variants> & {
+  as?: T;
+  children: ReactNode;
+} & ComponentProps<T>;
 
-export const Text = ({ as = "p", lang, className, children, weight, size, color }: Props) => {
-  const Tag = as
+export const Text = <T extends ElementType = "p">({ as, className, children, lang, weight, size, color, ...props }: TextProps<T>) => {
+  const Tag = as || "p";
+
   return (
-    <Tag className={`${style({ lang, weight, size, color })} ${className}`}>
+    <Tag {...props} className={variants({ lang, weight, size, color, className })}>
       {children}
     </Tag>
-  )
-}
+  );
+};
