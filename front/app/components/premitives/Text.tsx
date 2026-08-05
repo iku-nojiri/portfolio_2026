@@ -32,7 +32,7 @@ const variants = tv({
 type TextProps<T extends ElementType> = VariantProps<typeof variants> & {
   as?: T;
   children: ReactNode;
-} & ComponentProps<T>;
+} & Omit<ComponentProps<T>, "children">;
 
 export const Text = <T extends ElementType = "p">({ as, className, children, lang, weight, size, color, ...props }: TextProps<T>) => {
   const Tag = as || "p";

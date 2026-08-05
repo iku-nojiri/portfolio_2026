@@ -41,6 +41,20 @@
   --color-button-ghost-bg: transparent;
   --color-button-ghost-bg--hover: #F0F3FF;
 
+  /* Badge */
+  --color-badge-primary-fg: #FFFFFF;
+  --color-badge-primary-bg: #155DFC;
+
+  --color-badge-secondary-fg: #202124;
+  --color-badge-secondary-bg: #E8EAF6;
+
+  --color-badge-outline-fg: #0A0A0A;
+  --color-badge-outline-bg: transparent;
+
+  --color-badge-destructive-fg: #FFFFFF;
+  --color-badge-destructive-bg: #D93025;
+
+
   /* System UI */
   --color-outline: #0000001F;
   --color-focus: #155DFC;
@@ -90,6 +104,19 @@
   --color-button-ghost-fg: #F1F5F9;
   --color-button-ghost-bg: transparent;
   --color-button-ghost-bg--hover: #0E1E47;
+
+  /* Badge */
+  --color-badge-primary-fg: #05113A;
+  --color-badge-primary-bg: #5993FF;
+
+  --color-badge-secondary-fg: #FAFAFA;
+  --color-badge-secondary-bg: #262626;
+
+  --color-badge-outline-fg: #F1F5F9;
+  --color-badge-outline-bg: transparent;
+
+  --color-badge-destructive-fg: #FFFFFF;
+  --color-badge-destructive-bg: #82181A;
 
   /* System UI */
   --color-outline: #334155;

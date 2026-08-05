@@ -3,6 +3,7 @@ import { Text } from "./components/premitives/Text";
 import { Link } from "./components/premitives/Link";
 import { Button } from "./components/premitives/Button";
 import { Heading } from "./components/premitives/Heading";
+import { Badge } from "./components/premitives/Badge";
 
 export default function Home() {
   return (
@@ -18,6 +19,12 @@ export default function Home() {
       <Button size={"sm"} appearance={"secondary"}>ボタン</Button>
       <Button appearance={"outline"}>ボタン</Button>
       <Button appearance={"ghost"}>ボタン</Button>
+      <ul>
+        <Badge as="li">hoge</Badge>
+        <Badge as="li" appearance="secondary">hoge</Badge>
+        <Badge as="span" appearance="outline" className="mr-10">hoge</Badge>
+        <Badge as="li" appearance="destructive">hoge</Badge>
+      </ul>
     </>
   );
 }
