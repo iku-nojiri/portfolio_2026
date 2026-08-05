@@ -26,7 +26,7 @@ export default function Home() {
         <Badge as="span" appearance="outline" className="mr-10">hoge</Badge>
         <Badge as="li" appearance="destructive">hoge</Badge>
       </ul>
-      <Panel as="div"　className="p-6" clickable={true}>
+      <Panel as="a" href="#" className="p-6" clickable={true}>
         <p>ほげ</p>
       </Panel>
     </>

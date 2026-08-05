@@ -3,7 +3,7 @@ import { typograhyVariants } from "./typograhyVariants";
 
 export const buttonVariants = tv({
   extend: typograhyVariants,
-  base: "rounded-lg inline-flex justify-center items-center gap-1.5 text-sm font-medium leading-5 cursor-pointer",
+  base: "rounded-lg inline-flex justify-center items-center gap-1.5 text-sm font-medium leading-5 cursor-pointer transition-colors duration-normal ",
   variants : {
     appearance: {
       primary: "bg-button-primary-bg text-button-primary-fg hover:bg-button-primary-bg--hover",

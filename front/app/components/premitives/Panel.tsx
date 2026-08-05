@@ -7,7 +7,7 @@ const variants = tv({
   base: "block bg-panel rounded-2xl border border-outline",
   variants: {
     clickable: {
-      true: "cursor-pointer hover:border-focus",
+      true: "cursor-pointer transition-colors duration-normal hover:border-focus",
     },
   },
 });

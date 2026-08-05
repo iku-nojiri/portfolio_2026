@@ -64,6 +64,11 @@
   /* Font */
   --font-roboto-flex: var(--font-roboto-flex);
   --font-noto-sans-jp: var(--font-noto-sans-jp);
+
+  /* Duration */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
 }
 
 .dark {
