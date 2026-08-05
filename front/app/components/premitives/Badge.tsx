@@ -24,8 +24,8 @@ type Props<T extends ElementType> = VariantProps<typeof variants> & {
   children: ReactNode;
 } & Omit<ComponentProps<T>, "children">;
 
-export const Badge = <T extends ElementType = "p">({ as, className, children, lang, appearance, ...props }: Props<T>) => {
-  const Tag = as || "p";
+export const Badge = <T extends ElementType = "span">({ as, className, children, lang, appearance, ...props }: Props<T>) => {
+  const Tag = as || "span";
 
   return (
     <Tag {...props} className={variants({ lang, appearance, className })}>

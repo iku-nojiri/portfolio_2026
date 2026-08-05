@@ -4,6 +4,7 @@ import { Link } from "./components/premitives/Link";
 import { Button } from "./components/premitives/Button";
 import { Heading } from "./components/premitives/Heading";
 import { Badge } from "./components/premitives/Badge";
+import { Panel } from "./components/premitives/Panel";
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
         <Badge as="span" appearance="outline" className="mr-10">hoge</Badge>
         <Badge as="li" appearance="destructive">hoge</Badge>
       </ul>
+      <Panel as="div"　className="p-6" clickable={true}>
+        <p>ほげ</p>
+      </Panel>
     </>
   );
 }

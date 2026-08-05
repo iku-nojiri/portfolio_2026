@@ -5,7 +5,7 @@
 @theme {
   /* Surfaces */
   --color-bg: #F8F9FA;
-  --color-card: #FFFFFF;
+  --color-panel: #FFFFFF;
   --color-popover: #FFFFFF;
   --color-muted: #E8EAED;
 
@@ -69,7 +69,7 @@
 .dark {
   /* Surfaces */
   --color-bg: #0F172A;
-  --color-card: #1E293B;
+  --color-panel: #1E293B;
   --color-popover: #1E293B;
   --color-muted: #334155;
 
