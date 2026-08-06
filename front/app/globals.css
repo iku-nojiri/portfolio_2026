@@ -3,134 +3,216 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Surfaces */
-  --color-bg: #F8F9FA;
-  --color-panel: #FFFFFF;
-  --color-popover: #FFFFFF;
-  --color-muted: #E8EAED;
+  /* ==============================
+     Surfaces
+     ============================== */
 
-  /* Text */
+  --color-bg: #f8f9fa;
+  --color-panel: #ffffff;
+  --color-popover: #ffffff;
+  --color-muted: #e8eaed;
+
+  /* ==============================
+     Text
+     ============================== */
+
   --color-fg: #202124;
-  --color-muted-fg: #5F6368;
+  --color-muted-fg: #5f6368;
 
-  /* Brand */
-  --color-primary: #155DFC;
-  --color-primary-fg: #FFFFFF;
-  --color-secondary: #E8EAF6;
+  /* ==============================
+     Brand
+     ============================== */
+
+  --color-primary: #155dfc;
+  --color-primary-fg: #ffffff;
+
+  --color-secondary: #e8eaf6;
   --color-secondary-fg: #202124;
-  --color-accent: #E8F0FE;
-  --color-accent-fg: #183DB2;
-  --color-destructive: #D93025;
-  --color-destructive-fg: #FFFFFF;
 
-  /* Button */
-  --color-button-primary-fg: #FFFFFF;
-  --color-button-primary-bg: #155DFC;
-  --color-button-primary-bg--hover: #155DFCE5;
+  --color-accent: #e8f0fe;
+  --color-accent-fg: #183db2;
+
+  --color-destructive: #d93025;
+  --color-destructive-fg: #ffffff;
+
+  /* ==============================
+     Button
+     ============================== */
+
+  --color-button-primary-fg: #ffffff;
+  --color-button-primary-bg: #155dfc;
+  --color-button-primary-bg--hover: #155dfce5;
 
   --color-button-secondary-fg: #030213;
-  --color-button-secondary-bg: #ECEEF2;
-  --color-button-secondary-bg--hover: #ECEEF2CC;
+  --color-button-secondary-bg: #eceef2;
+  --color-button-secondary-bg--hover: #eceef2cc;
 
-  --color-button-outline-fg: #0A0A0A;
-  --color-button-outline-fg--hover: #183DB2;
+  --color-button-outline-fg: #0a0a0a;
+  --color-button-outline-fg--hover: #183db2;
   --color-button-outline-bg: transparent;
-  --color-button-outline-bg--hover: #F0F3FF;
+  --color-button-outline-bg--hover: #f0f3ff;
 
-  --color-button-ghost-fg: #0A0A0A;
+  --color-button-ghost-fg: #0a0a0a;
   --color-button-ghost-bg: transparent;
-  --color-button-ghost-bg--hover: #F0F3FF;
+  --color-button-ghost-bg--hover: #f0f3ff;
 
-  /* Badge */
-  --color-badge-primary-fg: #FFFFFF;
-  --color-badge-primary-bg: #155DFC;
+  /* ==============================
+     Badge
+     ============================== */
+
+  --color-badge-primary-fg: #ffffff;
+  --color-badge-primary-bg: #155dfc;
 
   --color-badge-secondary-fg: #202124;
-  --color-badge-secondary-bg: #E8EAF6;
+  --color-badge-secondary-bg: #e8eaf6;
 
-  --color-badge-outline-fg: #0A0A0A;
+  --color-badge-outline-fg: #0a0a0a;
   --color-badge-outline-bg: transparent;
 
-  --color-badge-destructive-fg: #FFFFFF;
-  --color-badge-destructive-bg: #D93025;
+  --color-badge-destructive-fg: #ffffff;
+  --color-badge-destructive-bg: #d93025;
 
+  /* ==============================
+     Tile
+     ============================== */
 
-  /* System UI */
-  --color-outline: #0000001F;
-  --color-focus: #155DFC;
-  --color-input-bg: #F1F3F4;
-  --color-switch-bg: #BDC1C6;
+  --color-tile-primary: #155dfc1a;
+  --color-tile-secondary: #eceef2;
+  --color-tile-destructive: #d4183d1a;
 
-  /* Font */
+  /* ==============================
+     Icon
+     ============================== */
+
+  --color-icon-primary: #155dfc;
+  --color-icon-secondary: #030213;
+  --color-icon-destructive: #d4183d;
+
+  /* ==============================
+     System UI
+     ============================== */
+
+  --color-outline: #0000001f;
+  --color-focus: #155dfc;
+  --color-input-bg: #f1f3f4;
+  --color-switch-bg: #bdc1c6;
+
+  /* ==============================
+     Font
+     ============================== */
+
   --font-roboto-flex: var(--font-roboto-flex);
   --font-noto-sans-jp: var(--font-noto-sans-jp);
 
-  /* Duration */
+  /* ==============================
+     Duration
+     ============================== */
+
   --duration-fast: 150ms;
   --duration-normal: 250ms;
   --duration-slow: 400ms;
 }
 
 .dark {
-  /* Surfaces */
-  --color-bg: #0F172A;
-  --color-panel: #1E293B;
-  --color-popover: #1E293B;
+  /* ==============================
+     Surfaces
+     ============================== */
+
+  --color-bg: #0f172a;
+  --color-panel: #1e293b;
+  --color-popover: #1e293b;
   --color-muted: #334155;
 
-  /* Text */
-  --color-fg: #F1F5F9;
-  --color-muted-fg: #94A3B8;
+  /* ==============================
+     Text
+     ============================== */
 
-  /* Brand */
-  --color-primary: #5993FF;
-  --color-primary-fg: #05113A;
+  --color-fg: #f1f5f9;
+  --color-muted-fg: #94a3b8;
+
+  /* ==============================
+     Brand
+     ============================== */
+
+  --color-primary: #5993ff;
+  --color-primary-fg: #05113a;
+
   --color-secondary: #262626;
-  --color-secondary-fg: #FAFAFA;
-  --color-accent: #0E1E47;
-  --color-accent-fg: #8EBAFF;
-  --color-destructive: #82181A;
-  --color-destructive-fg: #FFFFFF;
+  --color-secondary-fg: #fafafa;
 
-  /* Button */
-  --color-button-primary-fg: #05113A;
-  --color-button-primary-bg: #5993FF;
-  --color-button-primary-bg--hover: #5993FFE5;
+  --color-accent: #0e1e47;
+  --color-accent-fg: #8ebaff;
 
-  --color-button-secondary-fg: #FAFAFA;
+  --color-destructive: #82181a;
+  --color-destructive-fg: #ffffff;
+
+  /* ==============================
+     Button
+     ============================== */
+
+  --color-button-primary-fg: #05113a;
+  --color-button-primary-bg: #5993ff;
+  --color-button-primary-bg--hover: #5993ffe5;
+
+  --color-button-secondary-fg: #fafafa;
   --color-button-secondary-bg: #262626;
-  --color-button-secondary-bg--hover: #262626CC;
+  --color-button-secondary-bg--hover: #262626cc;
 
-  --color-button-outline-fg: #F1F5F9;
-  --color-button-outline-fg--hover: #8EBAFF;
-  --color-button-outline-bg: #3341554D;
-  --color-button-outline-bg--hover: #0E1E47;
+  --color-button-outline-fg: #f1f5f9;
+  --color-button-outline-fg--hover: #8ebaff;
+  --color-button-outline-bg: #3341554d;
+  --color-button-outline-bg--hover: #0e1e47;
 
-  --color-button-ghost-fg: #F1F5F9;
+  --color-button-ghost-fg: #f1f5f9;
   --color-button-ghost-bg: transparent;
-  --color-button-ghost-bg--hover: #0E1E47;
+  --color-button-ghost-bg--hover: #0e1e47;
 
-  /* Badge */
-  --color-badge-primary-fg: #05113A;
-  --color-badge-primary-bg: #5993FF;
+  /* ==============================
+     Badge
+     ============================== */
 
-  --color-badge-secondary-fg: #FAFAFA;
+  --color-badge-primary-fg: #05113a;
+  --color-badge-primary-bg: #5993ff;
+
+  --color-badge-secondary-fg: #fafafa;
   --color-badge-secondary-bg: #262626;
 
-  --color-badge-outline-fg: #F1F5F9;
+  --color-badge-outline-fg: #f1f5f9;
   --color-badge-outline-bg: transparent;
 
-  --color-badge-destructive-fg: #FFFFFF;
-  --color-badge-destructive-bg: #82181A;
+  --color-badge-destructive-fg: #ffffff;
+  --color-badge-destructive-bg: #82181a;
 
-  /* System UI */
+  /* ==============================
+     Tile
+     ============================== */
+
+  --color-tile-primary: #5993ff1a;
+  --color-tile-secondary: #262626;
+  --color-tile-destructive: #82181a1a;
+
+  /* ==============================
+     Icon
+     ============================== */
+
+  --color-icon-primary: #5993ff;
+  --color-icon-secondary: #fafafa;
+  --color-icon-destructive: #82181a;
+
+  /* ==============================
+     System UI
+     ============================== */
+
   --color-outline: #334155;
-  --color-focus: #5993FF;
-  --color-input-bg: #F1F3F4;
-  --color-switch-bg: #BDC1C6;
+  --color-focus: #5993ff;
+  --color-input-bg: #f1f3f4;
+  --color-switch-bg: #bdc1c6;
 }
 
-/* Base styles */
+/* ==============================
+   Base styles
+   ============================== */
+
 @layer base {
   * {
     @apply border-outline;
