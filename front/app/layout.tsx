@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="jp">
-      <body className={`${robotoFlex.variable} ${notoSansJP.variable}`}>
+      <body className={`${robotoFlex.variable} ${notoSansJP.variable} dark`}>
         {children}
       </body>
     </html>
