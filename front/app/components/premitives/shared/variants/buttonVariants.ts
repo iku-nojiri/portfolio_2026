@@ -9,7 +9,7 @@ export const buttonVariants = tv({
       primary: "bg-button-primary-bg text-button-primary-fg hover:bg-button-primary-bg--hover",
       secondary: "bg-button-secondary-bg text-button-secondary-fg hover:bg-button-secondary-bg--hover",
       outline: "bg-button-outline-bg text-button-outline-fg border border-outline hover:bg-button-outline-bg--hover",
-      ghost: "bg-button-ghost-bg text-button-ghost-fg hover:bg-button-ghost-bg--hover",
+      ghost: "bg-button-ghost-bg text-button-ghost-fg hover:text-button-ghost-fg--hover hover:bg-button-ghost-bg--hover",
     },
     size: {
       sm: "px-3 py-1.5",
