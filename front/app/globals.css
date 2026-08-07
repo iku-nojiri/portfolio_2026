@@ -53,6 +53,7 @@
   --color-button-outline-bg--hover: #f0f3ff;
 
   --color-button-ghost-fg: #0a0a0a;
+  --color-button-ghost-fg--hover: #183DB2;
   --color-button-ghost-bg: transparent;
   --color-button-ghost-bg--hover: #f0f3ff;
 
@@ -164,6 +165,7 @@
   --color-button-outline-bg--hover: #0e1e47;
 
   --color-button-ghost-fg: #f1f5f9;
+  --color-button-ghost-fg--hover: #8EBAFF;
   --color-button-ghost-bg: transparent;
   --color-button-ghost-bg--hover: #0e1e47;
 
