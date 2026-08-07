@@ -6,8 +6,9 @@ const variants = tv({
   base: "inline-flex justify-center items-center aspect-square rounded-[10px]",
   variants: {
     size: {
-      md: "p-2 w-12",
-      lg: "p-4 w-20",
+      sm: "w-8",
+      md: "w-12",
+      lg: "w-20",
     },
     circle: {
       true: "rounded-full"
