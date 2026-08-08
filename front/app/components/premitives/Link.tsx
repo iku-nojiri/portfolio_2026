@@ -8,9 +8,9 @@ type Props = VariantProps<typeof buttonVariants> & ComponentProps<typeof NextLin
   children: ReactNode
 }
 
-export const Link = ({ children, className, lang, appearance, size, iconPos, disabled, ...props }: Props) => {
+export const Link = ({ children, className, lang, appearance, size, disabled, ...props }: Props) => {
   return (
-    <NextLink {...props} className={buttonVariants({ lang, appearance, size, iconPos, disabled, className })}>
+    <NextLink {...props} className={buttonVariants({ lang, appearance, size, disabled, className })}>
       {children}
     </NextLink>
   )

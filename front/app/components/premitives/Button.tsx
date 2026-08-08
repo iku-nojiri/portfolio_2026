@@ -6,9 +6,9 @@ type Props = VariantProps<typeof buttonVariants> & ComponentProps<"button"> & {
   children: ReactNode
 }
 
-export const Button = ({ children, className, lang, appearance, size, iconPos, disabled, ...props }: Props) => {
+export const Button = ({ children, className, lang, appearance, size, disabled, ...props }: Props) => {
   return (
-    <button {...props} disabled={disabled} className={buttonVariants({ lang, appearance, size, iconPos, disabled, className })}>
+    <button {...props} disabled={disabled} className={buttonVariants({ lang, appearance, size, disabled, className })}>
       {children}
     </button>
   )

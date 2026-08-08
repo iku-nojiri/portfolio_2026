@@ -16,10 +16,6 @@ export const buttonVariants = tv({
       md: "px-4 py-2",
       lg: "px-6 py-2.5",
     },
-    iconPos: {
-      left: "flex-row",
-      right: "flex-row-reverse",
-    },
     disabled: {
       true: "opacity-50 pointer-events-none"
     }
