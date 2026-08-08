@@ -3,10 +3,10 @@ import { tv } from "tailwind-variants";
 import type { VariantProps } from "tailwind-variants";
 
 const variants = tv({
-  base: "px-6 pt-20 pb-20",
+  base: "px-6 pt-20 pb-20 md:px-10",
   variants: {
     colored: {
-      true: "bg-secondary",
+      true: "bg-accent",
       false: "bg-bg"
     },
   },

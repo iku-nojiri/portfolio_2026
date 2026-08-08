@@ -5,7 +5,7 @@ import { HeaderActions } from "./HeaderActions";
 
 export const Header = () => {
   return (
-    <header className="px-6 border-b border-muted">
+    <header className="fixed top-0 left-0 right-0 px-6 border-b border-muted bg-bg z-50 md:px-10">
       <HeaderInner>
         <HeaderLogo />
         <HeaderNav />
