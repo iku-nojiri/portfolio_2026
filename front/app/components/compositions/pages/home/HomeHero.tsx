@@ -5,18 +5,19 @@ import { ArrowRight } from "lucide-react";
 
 export const HomeHero = () => {
   return (
-    <>
+    <div>
       <h1
         className="
-          w-full
-          text-5xl font-extrabold font-roboto-flex leading-none
-          bg-linear-to-r from-[#155DFC] via-[#AD46FF] to-[#F6339A]
-          bg-clip-text text-transparent
-          text-center
-          md:w-152
-          md:text-left
-          md:text-8xl
-        ">
+            w-full
+            text-5xl font-extrabold font-roboto-flex leading-none
+            bg-linear-to-r from-[#155DFC] via-[#AD46FF] to-[#F6339A]
+            bg-clip-text text-transparent
+            text-center
+            md:w-152
+            md:text-left
+            md:text-8xl
+          "
+      >
         Hi, I'm a Web
         <br />
         Developer
@@ -35,6 +36,6 @@ export const HomeHero = () => {
           お問い合わせ
         </Link>
       </nav>
-    </>
+    </div>
   );
 };

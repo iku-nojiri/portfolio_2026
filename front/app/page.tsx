@@ -6,7 +6,7 @@ import { HomeHero } from "./components/compositions/pages/home/HomeHero";
 export default function Home() {
   return (
     <>
-      <Container as="div">
+      <Container as="div" className="flex items-center h-[70dvh]">
         <Inner size="lg">
           <HomeHero />
         </Inner>
