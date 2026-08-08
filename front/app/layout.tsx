@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto_Flex, Noto_Sans_JP } from "next/font/google";
+import { Header } from "./components/compositions/layouts/Header";
+import { Main } from "./components/compositions/layouts/Main";
+import { Footer } from "./components/compositions/layouts/Footer";
 import "./globals.css";
 
 const robotoFlex = Roboto_Flex({
@@ -27,7 +30,9 @@ export default function RootLayout({
   return (
     <html lang="jp">
       <body className={`${robotoFlex.variable} ${notoSansJP.variable} dark`}>
-        {children}
+        <Header />
+        <Main>{children}</Main>
+        <Footer />
       </body>
     </html>
   );
