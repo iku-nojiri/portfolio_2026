@@ -25,7 +25,7 @@ export const HomeCard = ({ pageName, text, href, icon }: Props) => {
         <Heading as="h3" weight="bold" size="xs">
           {pageName}
         </Heading>
-        <Text color="muted">{text}</Text>
+        <Text>{text}</Text>
       </div>
     </Panel>
   );

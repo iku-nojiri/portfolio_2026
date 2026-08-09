@@ -22,7 +22,7 @@ export const HomeHero = () => {
         <br />
         Developer
       </h1>
-      <Text color="muted" className="mt-5 text-center md:text-left">
+      <Text className="mt-5 text-center md:text-left">
         モダンな技術を活用し、ユーザーにとって使いやすく価値のあるウェブサイトや
         <br />
         アプリケーションの開発を目指しています。
