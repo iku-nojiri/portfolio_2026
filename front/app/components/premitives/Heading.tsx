@@ -11,12 +11,12 @@ const variants = tv({
       bold: "font-extrabold",
     },
     size: {
-      large: "text-4xl leading-10 sm:text-3xl sm:leading-9",  // 36px
-      mediumLarge: "text-3xl leading-9",                      // 30px
-      medium: "text-2xl leading-9",                           // 24px
-      smallMedium: "text-xl leading-8",                       // 20px
-      small: "text-lg leading-7",                             // 18px
-      tiny: "text-base leading-7",                            // 16px
+      xxl: "text-4xl leading-10", // 36px
+      xl:  "text-3xl leading-9",  // 30px
+      lg:  "text-2xl leading-9",  // 24px
+      md:  "text-xl leading-8",   // 20px
+      sm:  "text-lg leading-7",   // 18px
+      xs:  "text-base leading-7", // 16px
     },
     color: {
       default: "text-fg",
