@@ -22,7 +22,7 @@ export const HomeCard = ({ pageName, text, href, icon }: Props) => {
         <Tile>
           <Icon className="text-primary" />
         </Tile>
-        <Heading as="h3" weight="bold" size="xs">
+        <Heading as="h3" lang="en" weight="bold" size="xs">
           {pageName}
         </Heading>
         <Text>{text}</Text>

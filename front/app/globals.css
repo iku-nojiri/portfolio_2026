@@ -7,7 +7,8 @@
      Surfaces
      ============================== */
 
-  --color-bg: #f8f9fa;
+  --color-bg: #fff;
+  --color-bg-subtle: #f8f9fa;
   --color-panel: #ffffff;
   --color-popover: #ffffff;
   --color-muted: #e8eaed;
@@ -119,7 +120,8 @@
      Surfaces
      ============================== */
 
-  --color-bg: #0f172a;
+  --color-bg: #1E293B;
+  --color-bg-subtle: #0E172A;
   --color-panel: #1e293b;
   --color-popover: #1e293b;
   --color-muted: #334155;

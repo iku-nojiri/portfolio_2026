@@ -4,7 +4,7 @@ import { Text } from "@/app/components/premitives/Text";
 export const FooterCopy = () => {
   const copyright = process.env.COPYRIGHT;
   return (
-    <Text as="small" size="small" color="muted">
+    <Text as="small" size="small">
       {copyright ?? "© 2026 Portfolio. All rights reserved."}
     </Text>
   );

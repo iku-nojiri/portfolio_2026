@@ -42,6 +42,8 @@ export default function Home() {
           </nav>
         </Inner>
       </Container>
+      {/* CTA Area */}
+      <Cta />
     </>
   );
 }

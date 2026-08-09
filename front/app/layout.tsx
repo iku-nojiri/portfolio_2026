@@ -3,7 +3,6 @@ import { Roboto_Flex, Noto_Sans_JP } from "next/font/google";
 import { Header } from "./components/compositions/layouts/Header";
 import { Main } from "./components/compositions/layouts/Main";
 import { Footer } from "./components/compositions/layouts/Footer";
-import { Cta } from "./components/compositions/layouts/Cta";
 import "./globals.css";
 
 const robotoFlex = Roboto_Flex({
@@ -30,10 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="jp">
-      <body className={`${robotoFlex.variable} ${notoSansJP.variable} dark`}>
+      <body className={`${robotoFlex.variable} ${notoSansJP.variable}`}>
         <Header />
         <Main>{children}</Main>
-        <Cta />
         <Footer />
       </body>
     </html>

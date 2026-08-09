@@ -6,23 +6,13 @@ const variants = tv({
   base: "px-6 pt-20 pb-20 md:px-10",
   variants: {
     colored: {
-      true: "bg-accent",
+      true: "bg-bg-subtle",
       false: "bg-bg"
     },
   },
   defaultVariants: {
     colored: false,
   },
-  // compoundVariants: [
-  //   {
-  //     colored: true,
-  //     class: "pt-20 pb-20"
-  //   },
-  //   {
-  //     colored: false,
-  //     class: "pt-20 pb-20"
-  //   }
-  // ]
 });
 
 type Props<T extends ElementType> = VariantProps<typeof variants> & {
