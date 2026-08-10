@@ -6,7 +6,7 @@ import { Text } from "@/app/components/premitives/Text";
 import { Link } from "@/app/components/premitives/Link";
 import { ArrowRight } from "lucide-react";
 
-export const Cta = () => {
+export const CtaArea = () => {
   return (
     <Container as="aside">
       <Inner size="lg">

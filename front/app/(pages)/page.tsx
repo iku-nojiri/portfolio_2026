@@ -4,7 +4,7 @@ import { Container } from "../components/premitives/Container";
 import { Inner } from "../components/premitives/Inner";
 import { HomeHero } from "../components/compositions/pages/home/HomeHero";
 import { HomeCard } from "../components/compositions/pages/home/HomeCard";
-import { Cta } from "../components/compositions/layouts/Cta";
+import { CtaArea } from "../components/compositions/layouts/CtaArea";
 
 export default function Home() {
   const navItemsOnCard = [
@@ -43,7 +43,7 @@ export default function Home() {
         </Inner>
       </Container>
       {/* CTA Area */}
-      <Cta />
+      <CtaArea />
     </>
   );
 }
