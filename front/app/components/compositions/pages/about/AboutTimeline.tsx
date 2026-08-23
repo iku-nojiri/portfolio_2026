@@ -33,7 +33,7 @@ export const AboutTimeline = ({ items }: Props) => {
             }}
           >
             <Heading as="h3" size="md">{item.title}</Heading>
-            <Text as="time" size="small">{item.date}</Text>
+            <Text as="time" size="sm">{item.date}</Text>
             <Text as="p">{item.text}</Text>
           </li>
         );

@@ -31,7 +31,7 @@ const variants = tv({
 })
 
 type Props = VariantProps<typeof variants> & {
-  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6",
+  as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p",
   children: ReactNode,
   className?: string
 }
