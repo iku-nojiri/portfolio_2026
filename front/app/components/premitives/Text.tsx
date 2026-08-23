@@ -17,7 +17,7 @@ const variants = tv({
       small: "text-sm",     // 14px
     },
     color: {
-      default: "text-fg",
+      default: "text-fg--muted",
       muted: "text-muted-fg",
     },
   },
