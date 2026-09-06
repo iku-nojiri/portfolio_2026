@@ -5,7 +5,7 @@ export const HeaderNav = () => {
   const navItems = ["home", "about", "skills", "works", "blog", "news", "contact"];
 
   return (
-    <nav>
+    <nav className="lg:block hidden">
       {navItems.map((item) => (
         <Link key={item} lang="en" appearance="ghost" className="text-base" href={NAV_MAP[item].href}>
           {NAV_MAP[item].name}
