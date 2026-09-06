@@ -6,7 +6,6 @@ import { PageHeading } from "@/app/components/compositions/pages/_shared/PageHea
 import { Heading } from "@/app/components/premitives/Heading";
 import { SKILLSET } from "@/app/constants/skillset";
 import { SkillsCard } from "@/app/components/compositions/pages/skills/SkillsCard";
-import { CtaArea } from "../../components/compositions/layouts/CtaArea";
 
 export default function Skills() {
   return (

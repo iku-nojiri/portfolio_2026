@@ -6,7 +6,6 @@ import { PageHeading } from "@/app/components/compositions/pages/_shared/PageHea
 import { Heading } from "@/app/components/premitives/Heading";
 import { Text } from "@/app/components/premitives/Text";
 import { AboutTimeline } from "@/app/components/compositions/pages/about/AboutTimeline";
-import { CtaArea } from "../../components/compositions/layouts/CtaArea";
 
 export default function About() {
   return (
@@ -80,8 +79,6 @@ export default function About() {
           </div>
         </Inner>
       </Container>
-      {/* CTA Area */}
-      <CtaArea />
     </>
   );
 }
