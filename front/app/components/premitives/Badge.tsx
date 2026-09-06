@@ -5,7 +5,7 @@ import type { VariantProps } from "tailwind-variants";
 
 const variants = tv({
   extend: typograhyVariants,
-  base: "inline-block px-2 py-0.5 text-sm font-medium leading-5 rounded-lg",
+  base: "inline-block px-2 py-0.5 text-sm font-medium leading-5 rounded-lg whitespace-nowrap",
   variants: {
     appearance: {
       primary: "text-badge-primary-fg bg-badge-primary-bg",

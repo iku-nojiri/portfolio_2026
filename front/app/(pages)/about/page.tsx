@@ -8,7 +8,7 @@ import { Text } from "@/app/components/premitives/Text";
 import { AboutTimeline } from "@/app/components/compositions/pages/about/AboutTimeline";
 import { CtaArea } from "../../components/compositions/layouts/CtaArea";
 
-export default function Home() {
+export default function About() {
   return (
     <>
       {/* Hero */}
