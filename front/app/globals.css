@@ -225,4 +225,13 @@
   body {
     @apply bg-bg font-noto-sans-jp;
   }
+
+  .bm-burger-button {
+   pointer-events: none;
+   z-index: -1;
+  }
+
+  .custom-button-tile {
+   @apply inline-flex items-center justify-center w-10 aspect-square rounded-full cursor-pointer bg-button-ghost-bg hover:bg-button-ghost-bg--hover;
+  }
 }
