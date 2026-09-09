@@ -2,12 +2,12 @@
 
 import { useState, useEffect, createContext, ReactNode } from "react";
 
-type MenuContext = {
+type DrawerContext = {
   isOpen: boolean;
   toggleOpen: () => void;
 };
 
-export const MenuContext = createContext<MenuContext>({
+export const DrawerContext = createContext<DrawerContext>({
   isOpen: false,
   toggleOpen: () => {},
 });
@@ -16,7 +16,7 @@ type Props = {
   children: ReactNode;
 };
 
-export const MenuContextProvider = ({ children }: Props) => {
+export const DrawerContextProvider = ({ children }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleOpen() {
@@ -40,8 +40,8 @@ export const MenuContextProvider = ({ children }: Props) => {
   }, []);
 
   return (
-    <MenuContext.Provider value={{ isOpen, toggleOpen }}>
+    <DrawerContext.Provider value={{ isOpen, toggleOpen }}>
       {children}
-    </MenuContext.Provider>
+    </DrawerContext.Provider>
   );
 };
