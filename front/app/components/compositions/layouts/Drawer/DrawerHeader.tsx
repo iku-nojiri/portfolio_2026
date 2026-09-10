@@ -1,11 +1,11 @@
-import { Text } from "@/app/components/premitives/Text";
+import { Heading } from "@/app/components/premitives/Heading";
 import { BurgerBtn } from "@/app/components/features/BurgerBtn";
 
 export const DrawerHeader = () => {
   return (
-    <header className="md:px-10 px-6 py-3.5 border-b border-muted">
+    <header className="md:pr-10 pr-6 pl-4 py-3.5 border-b border-muted">
       <div className="flex justify-between items-center">
-        <Text weight="bold">Menu</Text>
+        <Heading as="p" size="xs">Menu</Heading>
         <BurgerBtn />
       </div>
     </header>

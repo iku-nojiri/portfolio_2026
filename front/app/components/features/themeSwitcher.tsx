@@ -4,25 +4,24 @@ import { Sun as LightIcon, Moon as DarkIcon } from "lucide-react";
 import { useTheme } from "@/app/hooks/useTheme";
 
 export const ThemeSwitcher = () => {
-  const { isDark, toggleTheme } = useTheme()
+  const { isDark, toggleTheme } = useTheme();
 
   return (
     <button
       type="button"
       className="custom-button-tile"
-      aria-label={
-        isDark ? "ライトテーマに切り替える" : "ダークテーマに切り替える"
-      }
+      aria-label={`
+        ${isDark === true ? "ライトテーマ" : "ダークテーマ"}に切り替える`}
       onClick={toggleTheme}
     >
-      {isDark ? (
-        <DarkIcon
+      {isDark === true ? (
+        <LightIcon
           size={20}
           aria-hidden="true"
           className="text-button-ghost-fg"
         />
       ) : (
-        <LightIcon
+        <DarkIcon
           size={20}
           aria-hidden="true"
           className="text-button-ghost-fg"
