@@ -1,4 +1,4 @@
-import { NAV_MAP } from "@/app/constants/navMap";
+import { NAV_MAP } from "@/app/constants/NAV_MAP";
 import { Link } from "@/app/components/premitives/Link";
 
 export const HeaderNav = () => {

@@ -1,4 +1,4 @@
-import { NAV_MAP } from "@/app/constants/navMap";
+import { NAV_MAP } from "@/app/constants/NAV_MAP";
 import NextLink from "next/link";
 import { Tile } from "@/app/components/premitives/Tile";
 import { Code as CodeIcon } from "lucide-react";

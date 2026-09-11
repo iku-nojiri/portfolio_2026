@@ -1,4 +1,4 @@
-import { NAV_MAP } from "@/app/constants/navMap";
+import { NAV_MAP } from "@/app/constants/NAV_MAP";
 import { Text } from "@/app/components/premitives/Text";
 import { Link } from "@/app/components/premitives/Link";
 import { ArrowRight } from "lucide-react";

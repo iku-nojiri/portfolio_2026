@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { NAV_MAP } from "../../constants/navMap";
+import { NAV_MAP } from "../../constants/NAV_MAP";
 import { Container } from "../../components/premitives/Container";
 import { Inner } from "../../components/premitives/Inner";
 import { PageHeading } from "@/app/components/compositions/pages/_shared/PageHeading";

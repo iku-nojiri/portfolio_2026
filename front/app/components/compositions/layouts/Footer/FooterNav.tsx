@@ -1,4 +1,4 @@
-import { NAV_MAP } from "@/app/constants/navMap";
+import { NAV_MAP } from "@/app/constants/NAV_MAP";
 import NextLink from "next/link";
 
 export const FooterNav = () => {

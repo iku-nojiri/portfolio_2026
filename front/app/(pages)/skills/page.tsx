@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { NAV_MAP } from "../../constants/navMap";
+import { NAV_MAP } from "../../constants/NAV_MAP";
 import { Container } from "../../components/premitives/Container";
 import { Inner } from "../../components/premitives/Inner";
 import { PageHeading } from "@/app/components/compositions/pages/_shared/PageHeading";
 import { Heading } from "@/app/components/premitives/Heading";
-import { SKILLSET } from "@/app/constants/skillset";
+import { SKILLSET } from "@/app/constants/SKILLSET";
 import { SkillsCard } from "@/app/components/compositions/pages/skills/SkillsCard";
 
 export default function Skills() {

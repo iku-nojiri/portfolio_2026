@@ -1,4 +1,4 @@
-import { NAV_MAP } from "@/app/constants/navMap";
+import { NAV_MAP } from "@/app/constants/NAV_MAP";
 import { Container } from "@/app/components/premitives/Container";
 import { Inner } from "@/app/components/premitives/Inner";
 import { Heading } from "@/app/components/premitives/Heading";

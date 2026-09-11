@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FONTS } from "./constants/fonts";
+import { FONTS } from "./constants/FONTS";
 import { DrawerContextProvider } from "./providers/DrawerContextProvider";
 import { Header } from "./components/compositions/layouts/Header";
 import { Drawer } from "./components/compositions/layouts/Drawer";
