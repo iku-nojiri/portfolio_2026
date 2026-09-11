@@ -3,6 +3,7 @@ import { NAV_MAP } from "../constants/NAV_MAP";
 import { Container } from "../components/premitives/Container";
 import { Inner } from "../components/premitives/Inner";
 import { HomeHero } from "../components/compositions/pages/home/HomeHero";
+import { Grid } from "../components/premitives/Grid";
 import { HomeCard } from "../components/compositions/pages/home/HomeCard";
 import { CtaArea } from "../components/compositions/layouts/CtaArea";
 
@@ -27,7 +28,7 @@ export default function Home() {
       <Container as="section" colored>
         <Inner size="lg">
           <h2 className="sr-only">サイト内ナビゲーション</h2>
-          <nav className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+          <Grid as="nav" col={3}>
             {navItemsOnCard.map((item) => {
               return (
                 <HomeCard
@@ -39,7 +40,7 @@ export default function Home() {
                 />
               );
             })}
-          </nav>
+          </Grid>
         </Inner>
       </Container>
       {/* CTA Area */}
