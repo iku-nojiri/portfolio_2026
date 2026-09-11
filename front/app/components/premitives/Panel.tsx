@@ -4,7 +4,7 @@ import NextLink from "next/link";
 import type { VariantProps } from "tailwind-variants";
 
 const variants = tv({
-  base: "block bg-panel rounded-2xl border border-outline",
+  base: "block bg-panel rounded-2xl border border-outline overflow-hidden",
   variants: {
     clickable: {
       true: "cursor-pointer transition-colors duration-normal hover:border-focus",

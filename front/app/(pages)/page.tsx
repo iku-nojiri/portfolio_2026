@@ -28,7 +28,7 @@ export default function Home() {
       <Container as="section" colored>
         <Inner size="lg">
           <h2 className="sr-only">サイト内ナビゲーション</h2>
-          <Grid as="nav" col={3}>
+          <Grid as="nav">
             {navItemsOnCard.map((item) => {
               return (
                 <HomeCard

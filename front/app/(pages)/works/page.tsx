@@ -3,6 +3,8 @@ import { NAV_MAP } from "../../constants/NAV_MAP";
 import { Container } from "../../components/premitives/Container";
 import { Inner } from "../../components/premitives/Inner";
 import { PageHeading } from "@/app/components/compositions/pages/_shared/PageHeading";
+import { Grid } from "@/app/components/premitives/Grid";
+import { WorksCard } from "@/app/components/compositions/pages/works/WorksCard";
 
 export default function Works() {
   return (
@@ -19,7 +21,11 @@ export default function Works() {
       {/* works */}
       <Container as="section">
         <Inner size="lg">
-          <p></p>
+          <Grid as="ul">
+            <WorksCard />
+            <WorksCard />
+            <WorksCard />
+          </Grid>
         </Inner>
       </Container>
     </>
