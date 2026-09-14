@@ -10,9 +10,9 @@ export default function Works() {
     <>
       {/* Hero */}
       <Container as="div" size="lg">
-        <PageHeading heading={NAV_MAP.works.name} text={NAV_MAP.works.text} />
+        <PageHeading heading={NAV_MAP.blog.name} text={NAV_MAP.blog.text} />
       </Container>
-      {/* works */}
+      {/* articless */}
       <Container as="section" size="lg">
         <Grid as="ul">
           <WorksCard />
