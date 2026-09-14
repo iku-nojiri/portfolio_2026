@@ -5,7 +5,8 @@ import { useContext } from "react";
 import { DrawerContext } from "@/app/providers/DrawerContextProvider";
 
 export const BurgerBtn = () => {
-  const { isOpen, toggleOpen } = useContext(DrawerContext);
+  const { isOpen, toggleOpen, isPc } = useContext(DrawerContext);
+
   return (
     <button
       type="button"
@@ -14,6 +15,7 @@ export const BurgerBtn = () => {
       aria-expanded={isOpen}
       aria-label={`メニューを${isOpen ? "閉じる" : "開く"}`}
       onClick={toggleOpen}
+      tabIndex={isPc ? -1 : 0}
     >
       {isOpen ? (
         <CloseIcon className="text-button-ghost-fg" />
