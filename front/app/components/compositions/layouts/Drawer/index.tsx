@@ -36,7 +36,7 @@ export const Drawer = () => {
     <Menu
       id="drawer"
       right
-      noTransition
+      // noTransition
       isOpen={isOpen}
       pageWrapId="burgerWrap"
       outerContainerId="burgerOuterContainer"

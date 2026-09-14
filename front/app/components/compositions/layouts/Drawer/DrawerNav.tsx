@@ -29,7 +29,7 @@ export const DrawerNav = () => {
             href={NAV_MAP[item].href}
             onClick={toggleOpen}
           >
-            <Icon />
+            <Icon aria-hidden />
             {NAV_MAP[item].name}
           </Link>
         );
