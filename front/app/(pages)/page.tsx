@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <Container as="div" size="lg" className="flex items-center h-[70dvh]">
+      <Container as="div" size="lg" space-y="md" className="flex items-center h-[70dvh]">
         <HomeHero />
       </Container>
       {/* Navigation section */}

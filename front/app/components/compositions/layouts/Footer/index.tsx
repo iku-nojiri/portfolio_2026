@@ -4,7 +4,7 @@ import { FooterNav } from "./FooterNav"
 
 export const Footer = () => {
   return (
-    <footer className="px-6 border-t border-muted">
+    <footer className="mt-20 px-6 border-t border-muted">
       <FooterInner>
         <FooterCopy />
         <FooterNav />

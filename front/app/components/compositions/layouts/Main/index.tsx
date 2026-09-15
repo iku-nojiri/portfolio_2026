@@ -6,6 +6,6 @@ type Props = {
 
 export const Main = ({children}: Props) => {
   return (
-    <main id="burgerWrap" className="min-h-screen mt-17">{children}</main>
+    <main id="burgerWrap" className="min-h-screen pt-17">{children}</main>
   )
 }
