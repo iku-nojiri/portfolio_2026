@@ -21,7 +21,7 @@ export const WorksCard = () => {
         <Text className="mt-1.5">
           アニメーションとダークモードサポートを備えたモダンなポートフォリオサイト
         </Text>
-        <ul className="flex gap-1.5 mt-6">
+        <ul className="flex gap-1.5 flex-wrap mt-6">
           <Badge as="li" appearance="secondary">
             React
           </Badge>
