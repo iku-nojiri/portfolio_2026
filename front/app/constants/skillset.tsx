@@ -2,13 +2,13 @@ import { ComponentType } from "react";
 import { Code, CodeXml, Package, PcCase, Wrench, Palette } from "lucide-react";
 import type { LucideProps } from "lucide-react";
 
-type SkillsetItem = Readonly<{
+type SkillsetItem = {
   category: string;
   icon: ComponentType<LucideProps>;
   skills: readonly string[];
-}>;
+};
 
-export const SKILLSET: SkillsetItem[] = [
+export const SKILLSET: Readonly<SkillsetItem>[] = [
   {
     category: "Languages",
     icon: Code,

@@ -5,15 +5,15 @@ import { GithubIcon as Github } from '../components/premitives/GithubIcon';
 import type {LucideProps} from 'lucide-react';
 import type { CustomIconProps } from '../components/premitives/shared/props/CustomIconProps.types';
 
-type NavItem = Readonly<{
+type NavItem = {
   name: string;
   href: string;
   external?: boolean;
   icon: ComponentType<LucideProps> | ComponentType<CustomIconProps>;
   text: string;
-}>;
+};
 
-export const NAV_MAP: Record<string, NavItem> = {
+export const NAV_MAP: Record<string, Readonly<NavItem>> = {
   home: {
     name: "Home",
     href: "/",
