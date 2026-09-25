@@ -10,7 +10,7 @@ type Props = {
 export const PageHeading = ({heading, text}: Props) => {
   return (
     <div className="grid place-items-center gap-3">
-      <Heading as="h1" size="xxl" color="primary">{heading}</Heading>
+      <Heading as="h1" size="xxl" color="primary" lang="en">{heading}</Heading>
       <Text as="p">{text}</Text>
     </div>
   )

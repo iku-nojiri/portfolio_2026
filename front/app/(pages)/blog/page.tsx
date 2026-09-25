@@ -21,7 +21,7 @@ export default function Works() {
         <BlogCard featured />
       </Container>
       <Container as="section" size="lg">
-        <Heading as="h2" size="xl">
+        <Heading as="h2" size="xl" lang="en">
           Recent Article
         </Heading>
         <Grid as="ul" className="mt-8">

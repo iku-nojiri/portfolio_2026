@@ -15,7 +15,7 @@ export default function About() {
       </Container>
       {/* My Journey< */}
       <Container as="section" size="sm">
-        <Heading as="h2" size="xl">
+        <Heading as="h2" size="xl" lang="en">
           My Journey
         </Heading>
         <div className="mt-5 space-y-6">
@@ -37,7 +37,7 @@ export default function About() {
       </Container>
       {/* Career */}
       <Container as="section" size="sm">
-        <Heading as="h2" size="xl">
+        <Heading as="h2" size="xl" lang="en">
           Career
         </Heading>
         <div className="mt-5">
