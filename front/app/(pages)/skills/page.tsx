@@ -3,6 +3,7 @@ import { NAV_MAP } from "../../constants/NAV_MAP";
 import { Container } from "../../components/premitives/Container";
 import { PageHeading } from "@/app/components/compositions/pages/_shared/PageHeading";
 import { Heading } from "@/app/components/premitives/Heading";
+import { Grid } from "@/app/components/premitives/Grid";
 import { SKILLSET } from "@/app/constants/SKILLSET";
 import { SkillsCard } from "@/app/components/compositions/pages/skills/SkillsCard";
 
@@ -18,7 +19,7 @@ export default function Skills() {
         <Heading as="h2" className="sr-only">
           Skillset List
         </Heading>
-        <div className="sm:grid-cols-2 md:grid-cols-3 grid grid-cols-1 gap-6">
+        <Grid>
           {SKILLSET.map((item) => (
             <SkillsCard
               key={item.category}
@@ -27,7 +28,7 @@ export default function Skills() {
               skills={item.skills}
             />
           ))}
-        </div>
+        </Grid>
       </Container>
     </>
   );
