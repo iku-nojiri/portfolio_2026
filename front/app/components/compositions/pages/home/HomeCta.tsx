@@ -3,7 +3,7 @@ import { Container } from "@/app/components/premitives/Container";
 import { Heading } from "@/app/components/premitives/Heading";
 import { Text } from "@/app/components/premitives/Text";
 import { Link } from "@/app/components/premitives/Link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight as RightIcon } from "lucide-react";
 
 export const HomeCta = () => {
   return (
@@ -17,7 +17,7 @@ export const HomeCta = () => {
         </Text>
         <Link className="mt-8" href={NAV_MAP.contact.href}>
           お問い合わせ
-          <ArrowRight size={16} className="text-primary-fg" />
+          <RightIcon size={16} className="text-primary-fg" aria-hidden />
         </Link>
       </div>
     </Container>

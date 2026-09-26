@@ -3,25 +3,25 @@ import { Panel } from "@/app/components/premitives/Panel";
 import { Heading } from "@/app/components/premitives/Heading";
 import { Text } from "@/app/components/premitives/Text";
 import { Badge } from "@/app/components/premitives/Badge";
-import { Calendar } from "lucide-react";
+import { Calendar as CalIcon } from "lucide-react";
 
 const variants = tv({
   slots: {
     heading: "",
     text: "",
-    time: "flex gap-1.5 items-center"
+    time: "flex gap-1.5 items-center",
   },
   variants: {
     featured: {
       true: {
         heading: "mt-4.5",
         text: "md:mt-8 mt-7",
-        time: "md:mt-5 mt-9"
+        time: "md:mt-5 mt-9",
       },
       false: {
         heading: "mt-3",
         text: "mt-3.5",
-        time: "mt-9"
+        time: "mt-9",
       },
     },
   },
@@ -52,7 +52,7 @@ export const BlogCard = ({ featured }: Props) => {
           Componentsがアプリケーションのパフォーマンスとユーザー体験をどのように改善できるかを学びます。
         </Text>
         <Text as="time" size="sm" className={time()}>
-          <Calendar size={14} /> 2026年2月15日
+          <CalIcon size={14} aria-hidden /> 2026年2月15日
         </Text>
       </div>
     </Panel>

@@ -1,7 +1,7 @@
 import { NAV_MAP } from "@/app/constants/NAV_MAP";
 import { Text } from "@/app/components/premitives/Text";
 import { Link } from "@/app/components/premitives/Link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight as RightIcon } from "lucide-react";
 
 export const HomeHero = () => {
   return (
@@ -30,7 +30,7 @@ export const HomeHero = () => {
       <nav className="flex justify-center items-center gap-2 mt-8 md:justify-start">
         <Link href={NAV_MAP.works.href}>
           作品を見る
-          <ArrowRight size={16} className="text-primary-fg" />
+          <RightIcon size={16} className="text-primary-fg" aria-hidden />
         </Link>
         <Link href={NAV_MAP.contact.href} appearance="outline">
           お問い合わせ
