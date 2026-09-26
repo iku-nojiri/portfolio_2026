@@ -1,4 +1,4 @@
-import { ComponentProps, ReactNode } from "react";
+import { ReactNode } from "react";
 import { tv } from "tailwind-variants";
 import { typograhyVariants } from "./shared/variants/typograhyVariants";
 import type { VariantProps } from "tailwind-variants";

@@ -91,12 +91,21 @@
   --color-icon-destructive: #d4183d;
 
   /* ==============================
+     Field
+     ============================== */
+   --color-field: #F5F5F7;
+   --color-field-fg: #0A0A0A;
+   --color-field-outline: #F5F5F7;
+   --color-field-outline--destructive: #F5F5F7;
+   --color-field-shadow--destructive: rgba(212,24,61,0.20);
+   --color-field--placeholder: #717182;
+
+  /* ==============================
      System UI
      ============================== */
 
   --color-outline: #0000001f;
   --color-focus: #155dfc;
-  --color-input-bg: #f1f3f4;
   --color-switch-bg: #bdc1c6;
 
   /* ==============================
@@ -204,12 +213,21 @@
   --color-icon-destructive: #82181a;
 
   /* ==============================
+     Field
+     ============================== */
+  --color-field: #1E293B;
+  --color-field-fg: #F1F5F9;
+  --color-field-outline: #334155;
+  --color-field-outline--destructive: #F5F5F7;
+  --color-field-shadow--destructive: rgba(130,24,26,0.40);
+  --color-field--placeholder: #94A3B8;
+
+  /* ==============================
      System UI
      ============================== */
 
   --color-outline: #334155;
   --color-focus: #5993ff;
-  --color-input-bg: #f1f3f4;
   --color-switch-bg: #bdc1c6;
 }
 
