@@ -36,6 +36,9 @@ export const HomeHero = () => {
           お問い合わせ
         </Link>
       </nav>
+      <div className="absolute -top-[1.58vw] -right-[1.58vw] w-[31.93vw] h-[31.93vw] max-md:hidden bg-gradient-to-bl from-purple-600 via-blue-500 to-teal-400 opacity-70 rounded-full blur-3xl" />
+      <div className="absolute top-[30%] -right-[1.58vw] w-[31.93vw] h-[31.93vw] max-md:hidden bg-gradient-to-bl from-purple-600 via-blue-500 to-teal-400 opacity-70 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-[1.58vw] w-[39.92vw] h-[39.92vw] max-md:hidden bg-gradient-to-tl from-indigo-500 via-fuchsia-500 to-pink-500 opacity-60 rounded-full blur-3xl" />
     </div>
   );
 };

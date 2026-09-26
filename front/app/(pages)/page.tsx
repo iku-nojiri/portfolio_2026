@@ -17,11 +17,16 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <Container as="div" size="lg" space-y="md" className="flex items-center h-[70dvh]">
+      <Container
+        as="div"
+        size="lg"
+        space-y="md"
+        className="flex items-center h-[70dvh]"
+      >
         <HomeHero />
       </Container>
       {/* Navigation section */}
-      <Container as="section" size="lg" colored>
+      <Container as="section" size="lg" colored className="relative z-10">
         <h2 className="sr-only">サイト内ナビゲーション</h2>
         <Grid as="nav">
           {navItemsOnCard.map((item) => {

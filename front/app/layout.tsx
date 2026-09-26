@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="jp">
-      <body className={`${robotoFlex.variable} ${notoSansJP.variable}`}>
+      <body className={`${robotoFlex.variable} ${notoSansJP.variable} overflow-x-hidden`}>
         <div id="burgerOuterContainer" className="overflow-hidden">
           <DrawerContextProvider>
             <Header />
