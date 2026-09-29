@@ -12,21 +12,26 @@ const variants = tv({
       bold: "font-extrabold",
     },
     size: {
-      lg: "text-lg",     // 18px
-      md: "text-base",  // 16px
-      sm: "text-sm",     // 14px
+      lg: "text-lg", // 18px
+      md: "text-base", // 16px
+      sm: "text-sm", // 14px
     },
     color: {
       default: "text-fg--muted",
       // muted: "text-fg--muted",
+    },
+    destructive: {
+      true: "text-fg--destructive",
+      false: "",
     },
   },
   defaultVariants: {
     lang: "jp",
     weight: "normal",
     size: "md",
-    color: "default" 
-  }
+    color: "default",
+    destructive: false,
+  },
 });
 
 type TextProps<T extends ElementType> = VariantProps<typeof variants> & {
@@ -34,11 +39,31 @@ type TextProps<T extends ElementType> = VariantProps<typeof variants> & {
   children: ReactNode;
 } & Omit<ComponentProps<T>, "children">;
 
-export const Text = <T extends ElementType = "p">({ as, className, children, lang, weight, size, color, ...props }: TextProps<T>) => {
+export const Text = <T extends ElementType = "p">({
+  as,
+  className,
+  children,
+  lang,
+  weight,
+  size,
+  color,
+  destructive,
+  ...props
+}: TextProps<T>) => {
   const Tag = as || "p";
 
   return (
-    <Tag {...props} className={variants({ lang, weight, size, color, className })}>
+    <Tag
+      {...props}
+      className={variants({
+        lang,
+        weight,
+        size,
+        color,
+        destructive,
+        className,
+      })}
+    >
       {children}
     </Tag>
   );

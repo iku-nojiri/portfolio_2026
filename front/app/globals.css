@@ -19,6 +19,7 @@
 
   --color-fg: #404246;
   --color-fg--muted: #5f6368;
+  --color-fg--destructive: #D4183D;
 
   /* ==============================
      Brand
@@ -141,6 +142,7 @@
 
   --color-fg: #C3D4E7;
   --color-fg--muted: #AFC2D8;
+  --color-fg--destructive: #F94144;
 
   /* ==============================
      Brand
@@ -218,8 +220,8 @@
   --color-field: #1E293B;
   --color-field-fg: #F1F5F9;
   --color-field-outline: #334155;
-  --color-field-outline--destructive: #F5F5F7;
-  --color-field-shadow--destructive: rgba(130,24,26,0.40);
+  --color-field-outline--destructive: #F94144;
+  --color-field-shadow--destructive: rgba(249,65,68,0.40);
   --color-field--placeholder: #94A3B8;
 
   /* ==============================
