@@ -5,19 +5,8 @@ import { ArrowRight as RightIcon } from "lucide-react";
 
 export const HomeHero = () => {
   return (
-    <div>
-      <h1
-        className="
-            w-full
-            text-5xl font-extrabold font-roboto-flex leading-none
-            bg-linear-to-r from-[#155DFC] via-[#AD46FF] to-[#F6339A]
-            bg-clip-text text-transparent
-            text-center
-            md:w-152
-            md:text-left
-            md:text-8xl
-          "
-      >
+    <div data-portal="home-hero">
+      <h1 className="w-full text-5xl font-extrabold font-roboto-flex leading-none bg-linear-to-r from-[#155DFC] via-[#AD46FF] to-[#F6339A] bg-clip-text text-transparent text-center md:w-152 md:text-left md:text-8xl">
         Hi, I'm a Web
         <br />
         Developer
@@ -36,9 +25,6 @@ export const HomeHero = () => {
           お問い合わせ
         </Link>
       </nav>
-      <div className="absolute -top-[1.58vw] -right-[1.58vw] w-[31.93vw] h-[31.93vw] max-md:hidden bg-gradient-to-bl from-purple-600 via-blue-500 to-teal-400 opacity-70 rounded-full blur-3xl" />
-      <div className="absolute top-[30%] -right-[1.58vw] w-[31.93vw] h-[31.93vw] max-md:hidden bg-gradient-to-bl from-purple-600 via-blue-500 to-teal-400 opacity-70 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-[1.58vw] w-[39.92vw] h-[39.92vw] max-md:hidden bg-gradient-to-tl from-indigo-500 via-fuchsia-500 to-pink-500 opacity-60 rounded-full blur-3xl" />
     </div>
   );
 };

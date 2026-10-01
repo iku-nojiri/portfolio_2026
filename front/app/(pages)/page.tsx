@@ -1,6 +1,7 @@
 import { NAV_MAP } from "../constants/NAV_MAP";
 import { Container } from "../components/premitives/Container";
 import { HomeHero } from "../components/compositions/pages/home/HomeHero";
+import { HomeGradation } from "../components/compositions/pages/home/HomeGradation";
 import { Grid } from "../components/premitives/Grid";
 import { HomeCard } from "../components/compositions/pages/home/HomeCard";
 import { HomeCta } from "../components/compositions/pages/home/HomeCta";
@@ -24,6 +25,7 @@ export default function Home() {
         className="flex items-center h-[70dvh]"
       >
         <HomeHero />
+        <HomeGradation />
       </Container>
       {/* Navigation section */}
       <Container as="section" size="lg" space-t="none" className="relative bg-transparent z-10">

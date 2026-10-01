@@ -123,6 +123,23 @@
   --duration-fast: 150ms;
   --duration-normal: 250ms;
   --duration-slow: 400ms;
+
+  /* ==============================
+     HeroAnimation
+     ============================== */
+  --animate-gradient-float: gradient-float 10s ease-in-out infinite;
+
+  @keyframes gradient-float {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: translate(-24px, 16px) scale(1.2);
+      opacity: 0.75;
+    }
+  }
 }
 
 .dark {
