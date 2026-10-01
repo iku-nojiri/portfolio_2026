@@ -26,7 +26,7 @@ export default function Home() {
         <HomeHero />
       </Container>
       {/* Navigation section */}
-      <Container as="section" size="lg" colored className="relative z-10">
+      <Container as="section" size="lg" space-t="none" className="relative bg-transparent z-10">
         <h2 className="sr-only">サイト内ナビゲーション</h2>
         <Grid as="nav">
           {navItemsOnCard.map((item) => {

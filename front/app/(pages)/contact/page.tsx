@@ -1,8 +1,9 @@
 "use client";
 
-import { useContext, useRef, type SubmitEvent } from "react";
+import { useEffect, useContext, useRef, type SubmitEvent } from "react";
 import { useRouter } from "next/navigation";
 import { Send as SubmitIcon } from "lucide-react";
+import { CONTACT_FIELDS } from "@/app/constants/CONTACT_FIELDS";
 import { ContactFormContext } from "@/app/providers/ContactFormProvider";
 import { ContactInput } from "@/app/components/compositions/pages/contact/ContactInput";
 import { ContactTextarea } from "@/app/components/compositions/pages/contact/ContactTextarea";
@@ -13,31 +14,42 @@ import { NAV_MAP } from "@/app/constants/NAV_MAP";
 
 export default function Contact() {
   const router = useRouter();
+  const isFirstRender = useRef<boolean>(true);
+  const formRef = useRef<HTMLFormElement>(null);
   const trapRef = useRef<HTMLInputElement>(null);
-  const { registerValue, updateErrorMessages } = useContext(ContactFormContext);
 
+  const {
+    fieldValues,
+    formStatus,
+    registerValue,
+    updateErrorMessages,
+    updateFormStatus,
+  } = useContext(ContactFormContext);
+
+  // フォーム内のinput & textareaをまとめて取得する
+  function getFormFields() {
+    return formRef.current?.querySelectorAll<
+      HTMLInputElement | HTMLTextAreaElement
+    >("input, textarea");
+  }
+
+  // フォーム送信時のバリデーションと状態更新を行う
   function validate(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    const formFields = e.currentTarget.querySelectorAll<
-      HTMLInputElement | HTMLTextAreaElement
-    >("input, textarea");
+    const formFields = getFormFields();
+
+    if (!formFields?.length) return;
 
     let isValid = true;
 
     formFields.forEach((field) => {
-      if (
-        !(field instanceof HTMLInputElement) &&
-        !(field instanceof HTMLTextAreaElement)
-      ) {
-        return;
-      }
-
       const isFieldValid = updateErrorMessages(field);
 
       if (!isFieldValid) {
         isValid = false;
       }
+
       registerValue(field);
     });
 
@@ -45,10 +57,41 @@ export default function Contact() {
       return;
     }
 
-    trapRef.current?.value === ""
-      ? router.push("/contact/confirm/")
-      : router.push("/");
+    // Honeypotが空であれば確認画面用の状態へ変更する
+    if (trapRef.current?.value === "") {
+      updateFormStatus("confirmed");
+    } else {
+      router.push("/");
+    }
   }
+
+  // formStatusがconfirmedになったら確認画面へ遷移する
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
+    if (formStatus === "confirmed") {
+      router.push("/contact/confirm/");
+    }
+  }, [formStatus, router]);
+
+  // Contextに入力値が保持されている場合、フォームに復元する
+  useEffect(() => {
+    const formFields = getFormFields();
+
+    if (!formFields?.length) return;
+
+    formFields.forEach((field) => {
+      const fieldName = field.name as keyof typeof CONTACT_FIELDS;
+      const value = fieldValues[fieldName];
+
+      if (value !== undefined) {
+        field.value = value;
+      }
+    });
+  }, [fieldValues]);
 
   return (
     <>
@@ -59,54 +102,53 @@ export default function Contact() {
           text={NAV_MAP.contact.text}
         />
       </Container>
-      {/* Contact Fom */}
+
+      {/* Contact Form */}
       <Container as="section" size="sm">
-        <form noValidate onSubmit={validate}>
+        <form noValidate onSubmit={validate} ref={formRef}>
           <div className="space-y-6">
-            {
-              /* honey pod */
-              <input
-                type="text"
-                name="subject"
-                placeholder="〇〇について"
-                ref={trapRef}
-                className="sr-only"
-              />
-            }
-            <ContactInput
-              label="お名前"
-              name="name"
-              placeholder="山田 太郎"
-              required={true}
+            {/* Honeypot */}
+            <input
+              type="text"
+              name="subject"
+              placeholder="〇〇について"
+              ref={trapRef}
+              className="sr-only"
             />
-            <ContactInput
-              label="ふりがな"
-              name="furigana"
-              placeholder="やまだ たろう"
-              required={true}
-            />
-            <ContactInput
-              label="会社名"
-              name="company"
-              placeholder="会社名〇〇"
-            />
-            <ContactInput
-              label="メールアドレス"
-              type="email"
-              name="email"
-              placeholder="your.email@example.com"
-              required={true}
-            />
-            <ContactTextarea
-              label="お問い合わせ内容"
-              name="message"
-              placeholder="お問い合わせ内容を入力してください"
-              rows={7}
-              required={true}
-            />
+
+            {Object.entries(CONTACT_FIELDS).map(([key, field]) => {
+              if (field.type === "textarea") {
+                return (
+                  <ContactTextarea
+                    key={key}
+                    label={field.label}
+                    name={field.name}
+                    placeholder={field.placeholder}
+                    rows={7}
+                    required={field.required}
+                  />
+                );
+              }
+
+              return (
+                <ContactInput
+                  key={key}
+                  label={field.label}
+                  type={field.type}
+                  name={field.name}
+                  placeholder={field.placeholder}
+                  required={field.required}
+                />
+              );
+            })}
+
             <Button type="submit" size="lg" className="w-full">
-              <SubmitIcon size={16} className="text-primary-fg" aria-hidden />
-              送信する
+              <SubmitIcon
+                size={16}
+                className="text-primary-fg"
+                aria-hidden
+              />
+              確認画面へ
             </Button>
           </div>
         </form>

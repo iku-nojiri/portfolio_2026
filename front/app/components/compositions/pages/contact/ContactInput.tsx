@@ -40,6 +40,7 @@ export const ContactInput = ({
         placeholder={placeholder}
         required={required}
         destructive={isError}
+        aria-invalid={isError}
       />
 
       <Text as="small" size="sm" destructive>

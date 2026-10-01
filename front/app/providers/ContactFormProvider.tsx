@@ -4,52 +4,56 @@ import { CONTACT_FIELDS } from "../constants/CONTACT_FIELDS";
 import { useState, createContext, ReactNode } from "react";
 
 type FieldValues = Record<keyof typeof CONTACT_FIELDS, string>;
-
 type ErrorMessages = Record<keyof typeof CONTACT_FIELDS, string>;
-
+type FormStatus = "init" | "confirmed" | "completed";
 type ContactFormContext = {
   fieldValues: FieldValues;
   errorMessages: ErrorMessages;
-  registerValue: (
-    field: HTMLInputElement | HTMLTextAreaElement,
-  ) => void;
+  formStatus: FormStatus;
+  registerValue: (field: HTMLInputElement | HTMLTextAreaElement) => void;
   updateErrorMessages: (
     field: HTMLInputElement | HTMLTextAreaElement,
   ) => boolean;
+  updateFormStatus: (status: FormStatus) => void;
 };
 
+const initFieldValues: FieldValues = Object.fromEntries(
+  Object.keys(CONTACT_FIELDS).map((name) => [name, ""]),
+) as FieldValues;
+
+const initErrorMessages: ErrorMessages = Object.fromEntries(
+  Object.keys(CONTACT_FIELDS).map((name) => [name, ""]),
+) as ErrorMessages;
+
 export const ContactFormContext = createContext<ContactFormContext>({
-  fieldValues: {
-    ...CONTACT_FIELDS,
-  },
-  errorMessages: {
-    ...CONTACT_FIELDS,
-  },
+  fieldValues: initFieldValues,
+  errorMessages: initErrorMessages,
+  formStatus: "init",
   registerValue: () => {},
   updateErrorMessages: () => true,
+  updateFormStatus: () => {},
 });
 
-export const ContactFormProvider = ({ children }: { children: ReactNode }) => {
-  const [fieldValues, setFieldValues] = useState({
-    ...CONTACT_FIELDS,
-  });
+export function ContactFormProvider({ children }: { children: ReactNode }) {
+  const [fieldValues, setFieldValues] =
+    useState<FieldValues>(initFieldValues);
 
-  function registerValue(
-    field: HTMLInputElement | HTMLTextAreaElement,
-  ) {
+  const [errorMessages, setErrorMessages] = useState<ErrorMessages>(
+    initErrorMessages,
+  );
+
+  const [formStatus, setFormStatus] = useState<FormStatus>("init");
+
+  function registerValue(field: HTMLInputElement | HTMLTextAreaElement) {
+    const fieldName = field.name as keyof typeof CONTACT_FIELDS;
+
     setFieldValues((prev) => ({
       ...prev,
-      [field.name]: field.value,
+      [fieldName]: field.value,
     }));
   }
 
-  const [errorMessages, setErrorMessages] = useState({
-    ...CONTACT_FIELDS,
-  });
-
-  function updateErrorMessages(
-    field: HTMLInputElement | HTMLTextAreaElement,
-  ) {
+  function updateErrorMessages(field: HTMLInputElement | HTMLTextAreaElement) {
     field.setCustomValidity("");
 
     if (field.validity.valueMissing) {
@@ -58,19 +62,32 @@ export const ContactFormProvider = ({ children }: { children: ReactNode }) => {
       field.setCustomValidity("メールアドレスの形式が正しくありません");
     }
 
+    const fieldName = field.name as keyof typeof CONTACT_FIELDS;
+
     setErrorMessages((prev) => ({
       ...prev,
-      [field.name]: field.validationMessage,
+      [fieldName]: field.validationMessage,
     }));
 
     return field.validity.valid;
   }
 
+  function updateFormStatus(status: FormStatus) {
+    setFormStatus(status);
+  }
+
   return (
     <ContactFormContext.Provider
-      value={{ fieldValues, errorMessages, registerValue, updateErrorMessages }}
+      value={{
+        fieldValues,
+        errorMessages,
+        formStatus,
+        registerValue,
+        updateErrorMessages,
+        updateFormStatus,
+      }}
     >
       {children}
     </ContactFormContext.Provider>
   );
-};
+}

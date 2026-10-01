@@ -43,6 +43,7 @@ export const ContactTextarea = ({
         rows={rows}
         cols={cols}
         destructive={isError}
+        aria-invalid={isError}
       />
 
       <Text as="small" size="sm" destructive>
