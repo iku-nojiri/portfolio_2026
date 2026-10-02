@@ -73,7 +73,7 @@ export default function Contact() {
     }
 
     if (formStatus === "confirmed") {
-      router.push("/contact/confirm/");
+      router.push(NAV_MAP.confirm.href);
     }
   }, [formStatus, router]);
 

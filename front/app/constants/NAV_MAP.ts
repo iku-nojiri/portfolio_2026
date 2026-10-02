@@ -10,7 +10,7 @@ type NavItem = {
   href: string;
   external?: boolean;
   icon?: ComponentType<LucideProps> | ComponentType<CustomIconProps>;
-  text: string;
+  text?: string;
 };
 
 export const NAV_MAP: Record<string, Readonly<NavItem>> = {
@@ -59,14 +59,10 @@ export const NAV_MAP: Record<string, Readonly<NavItem>> = {
   confirm: {
     name: "Confirm",
     href: "/contact/confirm",
-    icon: Mail,
-    text: "以下の内容でよろしければ送信してください"
   },
   complete: {
     name: "Complete",
     href: "/contact/complete",
-    icon: Mail,
-    text: "プロジェクトのアイデアがありますか？一緒にあなたのビジョンを実現しましょう"
   },
   github: {
     name: "Github",

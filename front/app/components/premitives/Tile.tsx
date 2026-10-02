@@ -16,7 +16,7 @@ const variants = tv({
     appearance: {
       primary: "bg-tile-primary",
       secondary: "bg-tile-secondary",
-      destructive: "bg-destructive",
+      destructive: "bg-tile-destructive",
     }
   },
   defaultVariants: {

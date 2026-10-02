@@ -35,12 +35,10 @@ export const ContactFormContext = createContext<ContactFormContext>({
 });
 
 export function ContactFormProvider({ children }: { children: ReactNode }) {
-  const [fieldValues, setFieldValues] =
-    useState<FieldValues>(initFieldValues);
+  const [fieldValues, setFieldValues] = useState<FieldValues>(initFieldValues);
 
-  const [errorMessages, setErrorMessages] = useState<ErrorMessages>(
-    initErrorMessages,
-  );
+  const [errorMessages, setErrorMessages] =
+    useState<ErrorMessages>(initErrorMessages);
 
   const [formStatus, setFormStatus] = useState<FormStatus>("init");
 
