@@ -6,7 +6,7 @@ type Props = ComponentProps<"div"> & {
 
 export const Band = ({ children, ...props }: Props) => {
   return (
-    <div {...props} className={`w-full p-6 bg-bg-subtle ${props.className ?? ""}`}>
+    <div {...props} className={`w-full p-6 bg-bg-subtle rounded-lg ${props.className ?? ""}`}>
       {children}
     </div>
   );
