@@ -1,0 +1,29 @@
+# WordPress core
+wordpress/
+
+# WordPress generated files
+wp-content/uploads/
+wp-content/cache/
+
+# WordPress themes
+wp-content/themes/*
+!wp-content/themes/portfolio/
+
+# Environment
+.env
+.env.*
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.swp
