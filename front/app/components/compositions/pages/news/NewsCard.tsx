@@ -4,23 +4,22 @@ import { Text } from "@/app/components/premitives/Text";
 import { Badge } from "@/app/components/premitives/Badge";
 import { Calendar as CalIcon } from "lucide-react";
 
-export const NewsCard = () => {
+type Props = Record<"slug" | "category" | "date" | "title" | "lead", string>;
+
+export const NewsCard = ({ slug, category, date, title, lead }: Props) => {
   return (
-    <Panel as="a" href="#">
+    <Panel as="a" href={`/news/${slug}`}>
       <div className="pt-6 px-6 pb-4">
         <div className="flex gap-1.5 items-center">
-          <Badge appearance="secondary">お知らせ</Badge>
+          <Badge appearance="secondary">{category}</Badge>
           <Text as="time" size="sm" className="flex gap-1.5 items-center">
-            <CalIcon size={14} aria-hidden /> 2026年2月15日
+            <CalIcon size={14} aria-hidden /> {date}
           </Text>
         </div>
         <Heading as="h2" size="md" className="mt-3">
-          Tech Innovation Award 2026受賞
+          {title}
         </Heading>
-        <Text className="mt-2">
-          ウェブ開発とオープンソースプロジェクトへの優れた貢献により、Tech
-          Innovation Awardを受賞しました。
-        </Text>
+        <Text className="mt-2">{lead}</Text>
       </div>
     </Panel>
   );
