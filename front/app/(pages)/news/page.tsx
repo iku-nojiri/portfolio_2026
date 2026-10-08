@@ -22,10 +22,10 @@ export default function Skills() {
       <Container size="lg">
         <Grid col={1}>
           {data ? (
-            data.map((item) => (
+            data.map((post) => (
               <NewsCard
-                key={item.id}
-                {...postDataAdapter.newsPost(item)}
+                key={post.id}
+                {...postDataAdapter.newsPost(post)}
               />
             ))
           ) : null}

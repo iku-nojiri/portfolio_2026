@@ -1,4 +1,5 @@
 import type { NewsPost } from "../types/NewsPost.type";
+import { BlogPost } from "../types/BlogPost.type";
 import { formatDate } from "@/app/libs/formatDate";
 import { truncateText } from "./truncateText";
 
@@ -18,4 +19,13 @@ export const postDataAdapter = {
       ]
     };
   },
+  blogPost: (post: BlogPost) => {
+    return {
+      category: post._embedded["wp:term"][0][0].name,
+      date: formatDate(post.date),
+      title: post.acf.title,
+      lead: truncateText(post.acf.lead, 75),
+      href: post.acf.url
+    };
+  }
 }

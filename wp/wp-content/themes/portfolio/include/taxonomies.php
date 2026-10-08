@@ -11,6 +11,16 @@ function portfolio_register_taxonomies()
         'show_in_rest' => true,
         'hierarchical' => true,
     ]);
+
+    register_taxonomy('blog_category', ['blog'], [
+        'labels' => [
+            'name' => 'Categories',
+            'singular_name' => 'Category',
+        ],
+        'public' => true,
+        'show_in_rest' => true,
+        'hierarchical' => true,
+    ]);
 }
 
 add_action('init', 'portfolio_register_taxonomies');
