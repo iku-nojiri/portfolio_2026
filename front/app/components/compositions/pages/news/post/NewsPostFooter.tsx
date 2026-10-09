@@ -15,18 +15,18 @@ type Props = {
 export const NewsPostFooter = ({ posts }: Props) => {
   return (
     <Container as="aside" size="md">
-      <Heading as="h2" size="lg">
-        その他の最新ニュース
-      </Heading>
-
-      <Grid col={1} className="mt-8">
-        {posts.map((post) => (
-          <NewsCard
-            key={post.slug}
-            {...postDataAdapter.newsPost(post)}
-          />
-        ))}
-      </Grid>
+      {posts.length ? (
+        <>
+          <Heading as="h2" size="xl">
+            Recent Post
+          </Heading>
+          <Grid col={1} className="mt-8">
+            {posts.map((post) => (
+              <NewsCard key={post.slug} {...postDataAdapter.newsPost(post)} />
+            ))}
+          </Grid>
+        </>
+      ) : null}
 
       <div className="flex justify-center mt-6">
         <Link href={NAV_MAP.news.href} appearance="ghost">

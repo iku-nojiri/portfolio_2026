@@ -4,11 +4,13 @@ import { Text } from "@/app/components/premitives/Text";
 import { Badge } from "@/app/components/premitives/Badge";
 import Image from "next/image";
 
-export const WorksCard = () => {
+type Props = Record<"slug" | "title" | "img" | "lead", string>;
+
+export const WorksCard = ({ slug, title, img, lead }: Props) => {
   return (
-    <Panel as="a" href="#">
+    <Panel as="a" href={`/works/${slug}`}>
       <Image
-        src="https://picsum.photos/seed/picsum/302/170"
+        src={img}
         className="w-full h-auto"
         width={302}
         height={170}
@@ -16,11 +18,9 @@ export const WorksCard = () => {
       />
       <div className="px-6 py-12">
         <Heading as="h2" size="xs">
-          ポートフォリオサイト
+          {title}
         </Heading>
-        <Text className="mt-1.5">
-          アニメーションとダークモードサポートを備えたモダンなポートフォリオサイト
-        </Text>
+        <Text className="mt-1.5">{lead}</Text>
         <ul className="flex gap-1.5 flex-wrap mt-6">
           <Badge as="li" appearance="secondary">
             React

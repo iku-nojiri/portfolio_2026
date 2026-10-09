@@ -9,14 +9,14 @@ import { ArrowRight as RightIcon } from "lucide-react";
 type Props = {
   period: string;
   role: string;
-  technologies: string[];
+  techStack: string[];
   href: string;
 };
 
 export const WorksPostSidebar = ({
   period,
   role,
-  technologies,
+  techStack,
   href,
 }: Props) => {
   return (
@@ -45,9 +45,9 @@ export const WorksPostSidebar = ({
           </Text>
           <dd>
             <ul className="flex flex-wrap gap-1.5">
-              {technologies.map((technology) => (
-                <Badge key={technology} as="li" appearance="secondary">
-                  {technology}
+              {techStack.map((item) => (
+                <Badge key={item} as="li" appearance="secondary">
+                  {item}
                 </Badge>
               ))}
             </ul>

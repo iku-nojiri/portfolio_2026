@@ -21,6 +21,15 @@ function portfolio_register_taxonomies()
         'show_in_rest' => true,
         'hierarchical' => true,
     ]);
+    register_taxonomy('works_category', ['works'], [
+        'labels' => [
+            'name' => 'Tech Stack',
+            'singular_name' => 'Tech Stack',
+        ],
+        'public' => true,
+        'show_in_rest' => true,
+        'hierarchical' => true,
+    ]);
 }
 
 add_action('init', 'portfolio_register_taxonomies');

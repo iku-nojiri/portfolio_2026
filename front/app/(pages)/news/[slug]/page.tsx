@@ -20,24 +20,15 @@ export default function Post({ params }: Props) {
   const data = usePostData<NewsPost>("news");
   const thisPost = data?.find((item) => item.slug === slug);
 
-  const otherPosts = data
-    ?.filter((item) => item.slug !== slug)
-    .slice(0, 2);
-  
+  const otherPosts = data?.filter((item) => item.slug !== slug).slice(0, 2);
 
   {
     return thisPost ? (
       <>
         <Container as="article" size="md">
-          <NewsPostHeading
-            {...postDataAdapter.newsPost(thisPost)}
-          />
-
-          <NewsPostBody
-            {...postDataAdapter.newsPost(thisPost)}
-          />
+          <NewsPostHeading {...postDataAdapter.newsPost(thisPost)} />
+          <NewsPostBody {...postDataAdapter.newsPost(thisPost)} />
         </Container>
-
         <NewsPostFooter posts={otherPosts ?? []} />
       </>
     ) : null;

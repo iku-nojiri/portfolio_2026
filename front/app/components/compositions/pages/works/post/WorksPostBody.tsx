@@ -1,8 +1,7 @@
-import { ReactNode } from "react";
 import { Heading } from "@/app/components/premitives/Heading";
 import { Text } from "@/app/components/premitives/Text";
 
-type Props = Record<"overview" | "approach", ReactNode>;
+type Props = Record<"overview" | "approach", string>;
 
 export const WorksPostBody = ({ overview, approach }: Props) => {
   return (

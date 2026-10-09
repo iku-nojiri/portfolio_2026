@@ -1,11 +1,17 @@
-import Image from "next/image";
+"use client"
+
 import { NAV_MAP } from "../../constants/NAV_MAP";
 import { Container } from "../../components/premitives/Container";
 import { PageHeading } from "@/app/components/compositions/pages/_shared/PageHeading";
 import { Grid } from "@/app/components/premitives/Grid";
 import { WorksCard } from "@/app/components/compositions/pages/works/WorksCard";
+import { usePostData } from "@/app/hooks/usePostData";
+import type { WorksPost } from "@/app/types/WorksPost.type";
+import { postDataAdapter } from "@/app/libs/postDataAdapter";
 
 export default function Works() {
+  const data = usePostData<WorksPost>("works");
+
   return (
     <>
       {/* Hero */}
@@ -15,9 +21,11 @@ export default function Works() {
       {/* works */}
       <Container as="section" size="lg">
         <Grid as="ul">
-          <WorksCard />
-          <WorksCard />
-          <WorksCard />
+          {data
+            ? data.map((post) => (
+                <WorksCard key={post.id} {...postDataAdapter.worksPost(post)} />
+              ))
+            : null}
         </Grid>
       </Container>
     </>

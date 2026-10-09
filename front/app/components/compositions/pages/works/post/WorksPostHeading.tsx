@@ -20,6 +20,7 @@ export const WorksPostHeading = ({ category, title, img }: Props) => {
         width={896}
         height={504}
         alt=""
+        loading="eager"
       />
     </>
   );
