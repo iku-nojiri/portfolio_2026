@@ -8,7 +8,7 @@ type Props = Record<"slug" | "category" | "date" | "title" | "lead", string>;
 
 export const NewsCard = ({ slug, category, date, title, lead }: Props) => {
   return (
-    <Panel as="a" href={`/news/${slug}`}>
+    <Panel as="a" href={`/news/post?slug=${encodeURIComponent(slug)}`}>
       <div className="pt-6 px-6 pb-4">
         <div className="flex gap-1.5 items-center">
           <Badge appearance="secondary">{category}</Badge>

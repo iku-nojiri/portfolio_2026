@@ -8,7 +8,7 @@ type Props = Record<"slug" | "title" | "img" | "lead", string>;
 
 export const WorksCard = ({ slug, title, img, lead }: Props) => {
   return (
-    <Panel as="a" href={`/works/${slug}`}>
+    <Panel as="a" href={`/works/post?slug=${encodeURIComponent(slug)}`}>
       <Image
         src={img}
         className="w-full h-auto"
