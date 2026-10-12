@@ -1,11 +1,12 @@
-import "dotenv/config";
 import { Text } from "@/app/components/premitives/Text";
 
-export const FooterCopy = () => {
-  const copyright = process.env.COPYRIGHT;
+export function FooterCopy() {
+  const year = new Date().getFullYear();
+  const copyright = process.env.COPYRIGHT ?? `© ${year} Portfolio. All rights reserved.`;
+
   return (
     <Text as="small" size="sm">
-      {copyright ?? "© 2026 Portfolio. All rights reserved."}
+      {copyright}
     </Text>
   );
-};
+}

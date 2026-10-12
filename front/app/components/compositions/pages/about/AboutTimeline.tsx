@@ -32,9 +32,9 @@ export const AboutTimeline = ({ items }: Props) => {
               borderColor: `color-mix(in srgb, var(--color-primary) ${mix}%, var(--color-bg))`,
             }}
           >
-            <Heading as="h3" size="md">{item.title}</Heading>
             <Text as="time" size="sm">{item.date}</Text>
-            <Text as="p">{item.text}</Text>
+            <Heading as="h3" size="md">{item.title}</Heading>
+            <Text as="p" className="mt-1">{item.text}</Text>
           </li>
         );
       })}

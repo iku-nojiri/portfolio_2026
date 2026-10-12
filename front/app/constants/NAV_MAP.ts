@@ -24,7 +24,7 @@ export const NAV_MAP = {
     name: "About",
     href: "/about",
     icon: User,
-    text: "私の経歴、経験、そしてウェブ開発への情熱について"
+    text: "私の経歴、経験、そしてWeb開発で大切にしていることについて"
   },
   skills: {
     name: "Skills",
@@ -36,30 +36,30 @@ export const NAV_MAP = {
     name: "Works",
     href: "/works",
     icon: CodeXml,
-    text: "私のスキルと経験を紹介する厳選されたプロジェクト"
+    text: "私のスキルと経験をご紹介いたします"
   },
   blog: {
     name: "Blog",
     href: "/blog",
     icon: Rss,
-    text: "ウェブ開発に関する考え、チュートリアル、インサイト"
+    text: "Web開発に関する技術ブログや学習記録を紹介"
   },
   news: {
     name: "News",
     href: "/news",
     icon: Newspaper,
-    text: "最新の成果、プロジェクト、お知らせをご覧ください"
+    text: "最新の成果、プロジェクト、お知らせをご紹介いたします"
   },
   contact: {
     name: "Contact",
     href: "/contact",
     icon: Mail,
-    text: "プロジェクトのアイデアがありますか？一緒にあなたのビジョンを実現しましょう"
+    text: "ご質問やご相談など、お気軽にお問い合わせください。"
   },
   confirm: {
     name: "Confirm",
     href: "/contact/confirm",
-    text: "プロジェクトのアイデアがありますか？一緒にあなたのビジョンを実現しましょう"
+    text: "ご質問やご相談など、お気軽にお問い合わせください。"
   },
   complete: {
     name: "Complete",

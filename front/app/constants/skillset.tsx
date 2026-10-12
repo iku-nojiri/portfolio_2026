@@ -46,6 +46,6 @@ export const SKILLSET: Readonly<SkillsetItem>[] = [
   {
     category: "Design Tools",
     icon: Palette,
-    skills: ["Figma", "Photoshop", "Illustrator", "XD"],
+    skills: ["Figma", "Photoshop", "Illustrator", "XD", "Lightroom"],
   },
 ];

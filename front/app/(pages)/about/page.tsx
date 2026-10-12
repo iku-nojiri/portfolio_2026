@@ -4,7 +4,13 @@ import { Container } from "../../components/premitives/Container";
 import { PageHeading } from "@/app/components/compositions/pages/_shared/PageHeading";
 import { Heading } from "@/app/components/premitives/Heading";
 import { Text } from "@/app/components/premitives/Text";
+import { Link } from "@/app/components/premitives/Link";
 import { AboutTimeline } from "@/app/components/compositions/pages/about/AboutTimeline";
+import { ExternalLink } from "lucide-react";
+
+const ExternalIcon = () => {
+  return <ExternalLink size={16} className="text-primary" aria-hidden />;
+};
 
 export default function About() {
   return (
@@ -20,18 +26,13 @@ export default function About() {
         </Heading>
         <div className="mt-5 space-y-6">
           <Text as="p">
-            ウェブ開発への道は大学時代に初めてウェブサイトを作成したことから始まりました。
-            最初は好奇心だったものが、すぐに情熱へと変わりました。
-            わずか数行のコードで、何百万人もの人々が使用できるインタラクティブな体験を創造できることに魅了されました。
+            コロナ禍を機に飲食店勤務からWebサイト制作のキャリアをスタートさせました。
           </Text>
           <Text as="p">
-            長年にわたり、React、TypeScript、Node.js、さまざまなデザインシステムなど、
-            モダンなウェブ技術のスキルを磨いてきました。クリーンで保守しやすいコードを書き、
-            見た目が美しいだけでなく、優れたユーザー体験を提供するインターフェースを作ることを信条としています。
+            2022年にコーダーとしてのキャリアをスタート。実務経験を積む一方で、React、Next.js、TypeScript、Viteなどの技術を独学で学習。単にデザインを再現するだけでなく、チームワークや保守性を意識したコードを書くことを大切にしています。
           </Text>
           <Text as="p">
-            コーディングをしていない時は、新しい技術を探求したり、オープンソースプロジェクトに貢献したり、
-            ブログ記事を通じて知識を共有したり、意欲的な開発者をメンタリングしたりしています。
+            現在はキャリアアップを目指し、時代が求めるモダンなフロントエンド技術と設計力を磨いています。ユーザー・運用者共に使いやすく、保守のしやすいWebサイトを実現することを目指しています。
           </Text>
         </div>
       </Container>
@@ -44,29 +45,92 @@ export default function About() {
           <AboutTimeline
             items={[
               {
-                title: "Web Coderとして就職",
-                date: "2022",
-                text: "Webサイトのコーディング業務を担当。",
+                title: "Webデザイナーとして就職",
+                date: "2021.08 - 2022.01",
+                text: (
+                  <>
+                    短期雇用で株式会社UGOOOに入社。Wixを使用したWebサイト制作を行う。
+                  </>
+                ),
               },
               {
-                title: "フロントエンド開発を開始",
-                date: "2023",
-                text: "ReactやTypeScriptを使った開発に携わる。",
+                title: "職業訓練校に入校",
+                date: "2022.01 - 2022.09",
+                text: (
+                  <>
+                    求職者支援訓練校
+                    <Link href="https://adjustacademy.com/" appearance="text" target="https://adjustacademy.com/">
+                      アジャストアカデミー
+                      <ExternalIcon />
+                    </Link>
+                    に入校。
+                    <br />
+                    「Webデザイナー・ディレクター・マーケティング養成科」でHTML、CSSをはじめとしたWebに関する技術を学ぶ。
+                  </>
+                ),
               },
               {
-                title: "リードエンジニアを担当",
-                date: "2024",
-                text: "チームの開発をリードする役割を担当。",
+                title: "Webコーダーとして就職",
+                date: "2022.10 - 2024.12",
+                text: (
+                  <>
+                    派遣社員として
+                    <Link href="https://www.sangonana.jp/" appearance="text" target="_blank">
+                      株式会社357
+                      <ExternalIcon />
+                    </Link>
+                    、
+                    <Link href="https://www.nkz.ac.jp/" appearance="text" target="_blank">
+                      学校法人 日本教育財団
+                      <ExternalIcon />
+                    </Link>
+                    で勤務。
+                    <br />
+                    主に教育関連のWebサイトの運用を行う。
+                  </>
+                ),
               },
               {
-                title: "Next.jsを導入",
-                date: "2025",
-                text: "Next.jsを使ったWebアプリケーション開発を開始。",
+                title: "チームリーダーに",
+                date: "2022.10 - 2024.11",
+                text: (
+                  <>
+                    派遣社員として
+                    <Link href="https://orizo.co.jp/" appearance="text" target="_blank">
+                      株式会社オリゾ
+                      <ExternalIcon />
+                    </Link>
+                    で勤務。その後正社員として入社。
+                    <br />
+                    2023年5月よりコーディングチームのリーダーに就く。
+                    美容医療系をはじめとした、様々なWebサイトの制作を行う。
+                  </>
+                ),
               },
               {
-                title: "ポートフォリオ制作",
-                date: "2026",
-                text: "Webエンジニアとしての活動をまとめたサイトを制作。",
+                title: "キャリアアップを目指す",
+                date: "2024.12 - 現在",
+                text: (
+                  <>
+                    <Link href="https://orizo.co.jp/" appearance="text" target="_blank">
+                      株式会社オリゾ
+                      <ExternalIcon />
+                    </Link>
+                    退社後、派遣社員として
+                    <Link href="https://loft-am.co.jp/" appearance="text" target="_blank">
+                      株式会社ロフト
+                      <ExternalIcon />
+                    </Link>
+                    、
+                    <Link href="https://asadigital.co.jp/jp/" appearance="text" target="_blank">
+                      株式会社ASA
+                      <ExternalIcon />
+                    </Link>
+                    で勤務。
+                    <br />
+                    ギフトスイーツのブランドサイト、教育機関の公式サイトをはじめとした大型サイトを中心に、幅広くWebサイトの制作・運用を行う。
+                  </>
+                ),
               },
             ]}
           />

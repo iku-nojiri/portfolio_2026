@@ -13,7 +13,7 @@ export const HomeCta = () => {
           Get in Touch
         </Heading>
         <Text className="mt-3.5 text-center">
-          ご質問やご相談がございましたら、お気軽にお問い合わせください。
+          ご質問やご不明な点がございましたら、お気軽にお問い合わせください。
         </Text>
         <Link className="mt-8" href={NAV_MAP.contact.href}>
           お問い合わせ
