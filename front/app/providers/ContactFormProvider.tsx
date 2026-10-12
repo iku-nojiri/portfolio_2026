@@ -5,7 +5,8 @@ import { useState, createContext, ReactNode } from "react";
 
 type FieldValues = Record<keyof typeof CONTACT_FIELDS, string>;
 type ErrorMessages = Record<keyof typeof CONTACT_FIELDS, string>;
-type FormStatus = "init" | "confirmed" | "completed";
+type FormStatus = "init" | "confirmed" | "submitted" | "completed" | "error";
+
 type ContactFormContext = {
   fieldValues: FieldValues;
   errorMessages: ErrorMessages;
@@ -15,6 +16,7 @@ type ContactFormContext = {
     field: HTMLInputElement | HTMLTextAreaElement,
   ) => boolean;
   updateFormStatus: (status: FormStatus) => void;
+  resetForm: () => void;
 };
 
 const initFieldValues: FieldValues = Object.fromEntries(
@@ -32,6 +34,7 @@ export const ContactFormContext = createContext<ContactFormContext>({
   registerValue: () => {},
   updateErrorMessages: () => true,
   updateFormStatus: () => {},
+  resetForm: () => {},
 });
 
 export function ContactFormProvider({ children }: { children: ReactNode }) {
@@ -74,6 +77,12 @@ export function ContactFormProvider({ children }: { children: ReactNode }) {
     setFormStatus(status);
   }
 
+  function resetForm() {
+    setFieldValues({ ...initFieldValues });
+    setErrorMessages({ ...initErrorMessages });
+    setFormStatus("init");
+  }
+
   return (
     <ContactFormContext.Provider
       value={{
@@ -83,6 +92,7 @@ export function ContactFormProvider({ children }: { children: ReactNode }) {
         registerValue,
         updateErrorMessages,
         updateFormStatus,
+        resetForm,
       }}
     >
       {children}

@@ -7,7 +7,6 @@ import {
 } from "lucide-react";
 import { useContext, useEffect } from "react";
 import { useRouter } from "next/navigation";
-
 import { ContactFormContext } from "@/app/providers/ContactFormProvider";
 import { NAV_MAP } from "@/app/constants/NAV_MAP";
 
@@ -19,15 +18,30 @@ import { Text } from "@/app/components/premitives/Text";
 import { Tile } from "@/app/components/premitives/Tile";
 
 export default function Complete() {
+  const { formStatus, resetForm } = useContext(ContactFormContext);
+  const router = useRouter();
+
+  useEffect(() => {
+    if (formStatus !== "error") {
+      router.replace(NAV_MAP.home.href);
+    }
+  }, [formStatus, router]);
+
+  if (formStatus !== "error") {
+    return null;
+  }
+
   return (
     <Container as="div" size="sm">
       <div className="grid place-items-center">
         <Tile size="lg" appearance="destructive" circle>
           <ErrorIcon size={48} className="text-icon-destructive" aria-hidden />
         </Tile>
+
         <Heading as="h1" size="lg" className="mt-7">
           送信に失敗しました
         </Heading>
+
         <Text className="mt-2 text-center">
           申し訳ございません。
           <br className="block sm:hidden" />
@@ -49,12 +63,13 @@ export default function Complete() {
           </Text>
         </Band>
 
-        <div className="grid grid-cols-1 gap-2 mt-10 w-full md:grid-cols-2">
+        <div className="mt-10 grid w-full grid-cols-1 gap-2 md:grid-cols-2">
           <Link href={NAV_MAP.contact.href} size="lg" appearance="outline">
             <LeftIcon size={16} className="text-fg" aria-hidden />
             入力画面へ戻る
           </Link>
-          <Link href={NAV_MAP.home.href} size="lg">
+
+          <Link href={NAV_MAP.home.href} size="lg" onClick={resetForm}>
             <HomeIcon size={16} className="text-primary-fg" aria-hidden />
             ホームに戻る
           </Link>
