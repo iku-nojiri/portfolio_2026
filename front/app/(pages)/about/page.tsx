@@ -71,7 +71,7 @@ export default function About() {
               },
               {
                 title: "Webコーダーとして就職",
-                date: "2022.10 - 2024.12",
+                date: "2023.01 - 2024.12",
                 text: (
                   <>
                     派遣社員として
