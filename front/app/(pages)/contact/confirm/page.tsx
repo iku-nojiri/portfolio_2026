@@ -49,13 +49,14 @@ export default function Confirm() {
     
     switch (formStatus) {
       case "init":
-        router.replace("/contact/");
+        router.replace(NAV_MAP.contact.href);
         return;
       case "completed":
-        router.replace("/contact/complete/");
+        router.replace(NAV_MAP.complete.href);
         return;
       case "error":
         router.replace("/contact/error/");
+        router.replace(NAV_MAP.error.href);
         return;
       case "submitted":
         break;

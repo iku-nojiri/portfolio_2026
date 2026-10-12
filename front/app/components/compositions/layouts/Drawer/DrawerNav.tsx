@@ -4,7 +4,12 @@ import { useContext } from "react";
 import { DrawerContext } from "@/app/providers/DrawerContextProvider";
 
 export const DrawerNav = () => {
-  const navItems = [
+  type DrawerNavKey = Extract<
+    keyof typeof NAV_MAP,
+    "home" | "about" | "skills" | "works" | "blog" | "news" | "contact"
+  >;
+
+  const navItems: DrawerNavKey[] = [
     "home",
     "about",
     "skills",
@@ -14,7 +19,7 @@ export const DrawerNav = () => {
     "contact",
   ];
 
-  const {toggleOpen} = useContext(DrawerContext)
+  const { toggleOpen } = useContext(DrawerContext);
 
   return (
     <nav className="mt-4 space-y-2">

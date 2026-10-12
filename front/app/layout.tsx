@@ -12,6 +12,10 @@ const { robotoFlex, notoSansJP } = FONTS;
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "My Portfolio",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({

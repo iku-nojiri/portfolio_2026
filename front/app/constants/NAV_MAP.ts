@@ -13,7 +13,7 @@ type NavItem = {
   text?: string;
 };
 
-export const NAV_MAP: Record<string, Readonly<NavItem>> = {
+export const NAV_MAP = {
   home: {
     name: "Home",
     href: "/",
@@ -59,10 +59,15 @@ export const NAV_MAP: Record<string, Readonly<NavItem>> = {
   confirm: {
     name: "Confirm",
     href: "/contact/confirm",
+    text: "プロジェクトのアイデアがありますか？一緒にあなたのビジョンを実現しましょう"
   },
   complete: {
     name: "Complete",
     href: "/contact/complete",
+  },
+  error: {
+    name: "Error",
+    href: "/contact/error",
   },
   github: {
     name: "Github",
@@ -71,4 +76,4 @@ export const NAV_MAP: Record<string, Readonly<NavItem>> = {
     icon: Github,
     text: "リポジトリを確認する"
   },
-};
+} satisfies Record<string, Readonly<NavItem>>;

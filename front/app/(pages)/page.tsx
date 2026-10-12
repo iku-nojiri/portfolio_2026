@@ -7,7 +7,12 @@ import { HomeCard } from "../components/compositions/pages/home/HomeCard";
 import { HomeCta } from "../components/compositions/pages/home/HomeCta";
 
 export default function Home() {
-  const navItemsOnCard = [
+  type HomeCardKey = Extract<
+    keyof typeof NAV_MAP,
+    "about" | "skills" | "works" | "blog" | "news" | "contact"
+  >;
+
+  const navItemsOnCard: HomeCardKey[] = [
     "about",
     "skills",
     "works",
@@ -15,6 +20,7 @@ export default function Home() {
     "news",
     "contact",
   ];
+  
   return (
     <>
       {/* Hero */}
@@ -28,7 +34,12 @@ export default function Home() {
         <HomeGradation />
       </Container>
       {/* Navigation section */}
-      <Container as="section" size="lg" space-t="none" className="relative bg-transparent z-10">
+      <Container
+        as="section"
+        size="lg"
+        space-t="none"
+        className="relative bg-transparent z-10"
+      >
         <h2 className="sr-only">サイト内ナビゲーション</h2>
         <Grid as="nav">
           {navItemsOnCard.map((item) => {
