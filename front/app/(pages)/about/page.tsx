@@ -55,7 +55,7 @@ export default function About() {
               },
               {
                 title: "職業訓練校に入校",
-                date: "2022.01 - 2022.09",
+                date: "2022.07 - 2022.12",
                 text: (
                   <>
                     求職者支援訓練校
