@@ -2,8 +2,10 @@ export type NewsPost = {
   id: number;
   slug: string;
   date: string;
+  title: {
+    rendered: string
+  }
   acf: {
-    title: string;
     text_01: string;
     text_02: string;
     text_03: string;

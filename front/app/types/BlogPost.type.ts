@@ -1,8 +1,10 @@
 export type BlogPost = {
   id: number;
   date: string;
+  title: {
+    rendered: string
+  }
   acf: {
-    title: string;
     lead: string;
     url: string
   },

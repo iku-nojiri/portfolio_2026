@@ -10,7 +10,7 @@ export const postDataAdapter = {
       slug: post.slug,
       category: post._embedded["wp:term"][0][0].name,
       date: formatDate(post.date),
-      title: post.acf.title,
+      title: post.title.rendered,
       img: post.acf.img,
       lead: truncateText(post.acf.text_01, 75),
       contents: [
@@ -24,7 +24,7 @@ export const postDataAdapter = {
     return {
       category: post._embedded["wp:term"][0][0].name,
       date: formatDate(post.date),
-      title: post.acf.title,
+      title: post.title.rendered,
       lead: truncateText(post.acf.lead, 75),
       href: post.acf.url
     };
@@ -34,7 +34,7 @@ export const postDataAdapter = {
       slug: post.slug,
       techStack: post._embedded["wp:term"][0].map((term) => term.name),
       date: formatDate(post.date),
-      title: post.acf.title,
+      title: post.title.rendered,
       category: post.acf.category,
       img: post.acf.img,
       lead: truncateText(post.acf.overview, 75),

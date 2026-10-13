@@ -2,8 +2,10 @@ export type WorksPost = {
   id: number;
   slug: string;
   date: string;
+  title: {
+    rendered: string
+  }
   acf: {
-    title: string;
     category: string;
     img: string;
     overview: string;
