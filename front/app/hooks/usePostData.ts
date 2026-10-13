@@ -13,5 +13,7 @@ export function usePostData<T>(postType: string) {
     })();
   }, [postType]);
 
+  console.log(data)
+
   return data;
 }

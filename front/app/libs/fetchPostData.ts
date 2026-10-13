@@ -1,10 +1,12 @@
+import 'dotenv/config'
+
 const config = {
   wpHost:
     process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test"
       ? "http://localhost:8080"
-      : "https://test.com",
+      : process.env.HOST,
   apiEntryPoint: "wp-json/wp/v2",
-  param: "?_embed"
+  param: "?_embed&acf_format=standard"
 };
 
 export async function fetchPostData(postType: string) {
