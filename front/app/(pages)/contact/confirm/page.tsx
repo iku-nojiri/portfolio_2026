@@ -21,6 +21,10 @@ import { Divider } from "@/app/components/premitives/Divider";
 
 export default function Confirm() {
   const apiUrl = process.env.NEXT_PUBLIC_FORM_API_URL;
+  // const apiUrl =
+  //   process.env.NODE_ENV === "development"
+  //     ? "https://dummy.example.com"
+  //     : process.env.NEXT_PUBLIC_FORM_API_URL;
   const isFirstRender = useRef<boolean>(true);
   const router = useRouter();
 
@@ -46,7 +50,7 @@ export default function Confirm() {
       }
       return;
     }
-    
+
     switch (formStatus) {
       case "init":
         router.replace(NAV_MAP.contact.href);
