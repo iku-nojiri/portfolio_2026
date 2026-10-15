@@ -4,11 +4,24 @@ import { Text } from "@/app/components/premitives/Text";
 import { Badge } from "@/app/components/premitives/Badge";
 import Image from "next/image";
 
-type Props = Record<"slug" | "title" | "img" | "lead", string>;
+type Props = {
+  slug: string;
+  title: string,
+  img: string,
+  lead: string,
+  techStack: string[]
+}
 
-export const WorksCard = ({ slug, title, img, lead }: Props) => {
+export const WorksCard = ({ slug, title, img, lead, techStack }: Props) => {
+  const isComingSoon = slug === "commingsoon";
+
   return (
-    <Panel as="a" href={`/works/post?slug=${encodeURIComponent(slug)}`}>
+    <Panel
+      as={isComingSoon ? "div" : "a"}
+      {...(!isComingSoon && {
+        href: `/works/post?slug=${encodeURIComponent(slug)}`,
+      })}
+    >
       <Image
         src={img}
         className="w-full h-auto"
@@ -22,15 +35,11 @@ export const WorksCard = ({ slug, title, img, lead }: Props) => {
         </Heading>
         <Text className="mt-1.5">{lead}</Text>
         <ul className="flex gap-1.5 flex-wrap mt-6">
-          <Badge as="li" appearance="secondary">
-            React
-          </Badge>
-          <Badge as="li" appearance="secondary">
-            TypeScript
-          </Badge>
-          <Badge as="li" appearance="secondary">
-            Tailwind CSS
-          </Badge>
+          {techStack.map((item) => (
+            <Badge key={item} as="li" appearance="secondary">
+              {item}
+            </Badge>
+          ))}
         </ul>
       </div>
     </Panel>

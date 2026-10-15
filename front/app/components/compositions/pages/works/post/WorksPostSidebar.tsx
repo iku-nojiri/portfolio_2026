@@ -54,7 +54,7 @@ export const WorksPostSidebar = ({
           </dd>
         </dl>
       </Panel>
-      <Link href={href} className="mt-6 w-full">
+      <Link href={href} className="mt-6 w-full" target="_blank">
         サイトを見る
         <RightIcon size={16} className="text-primary-fg" aria-hidden />
       </Link>

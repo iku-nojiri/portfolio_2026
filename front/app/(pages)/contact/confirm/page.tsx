@@ -67,7 +67,7 @@ export default function Confirm() {
     async function submitForm() {
       if (!apiUrl) {
         updateFormStatus("error");
-        setErrorMessage("送信先が設定されていません。");
+        // setErrorMessage("送信先が設定されていません。");
         return;
       }
 

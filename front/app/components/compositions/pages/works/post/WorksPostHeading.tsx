@@ -16,7 +16,7 @@ export const WorksPostHeading = ({ category, title, img }: Props) => {
       </Heading>
       <Image
         src={img}
-        className="w-full h-auto mt-8 rounded-2xl"
+        className="w-full h-auto mt-8 rounded-2xl border border-muted"
         width={896}
         height={504}
         alt=""

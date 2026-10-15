@@ -20,7 +20,7 @@ export default function Contents() {
   const thisPost = data?.find((item) => item.slug === slug);
   const otherPosts = data
     ?.filter((item) => item.slug !== slug)
-    .slice(0, 2);
+    .slice(0, 3);
 
   useEffect(() => {
     if (data === null) return;

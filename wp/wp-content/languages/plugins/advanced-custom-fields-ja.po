@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Advanced Custom Fields (ACF®) - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-26 10:38:02+0000\n"
+"PO-Revision-Date: 2026-10-11 05:03:38+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1255,6 +1255,15 @@ msgstr "ターゲットフィールド"
 #: includes/admin/views/global/form-top.php:69
 msgid "(Duplicated from %s)"
 msgstr "( %s からの複製)"
+
+#. translators: %s the URL to ACF's bidirectional relationship documentation
+#: includes/acf-bidirectional-functions.php:276
+msgid "Enabling the bidirectional setting allows you to update a value in the target fields for each value selected for this field, adding or removing the Post ID, Taxonomy ID or User ID of the item being updated. For more information, please read the <a href=\"%s\" target=\"_blank\">documentation</a>."
+msgstr "双方向設定を有効にすると、このフィールドで選択された値ごとにターゲットフィールドの値を更新し、更新されるアイテムの値 (投稿 ID、タクソノミー ID、またはユーザー ID ) を追加または削除することができます。詳しくは <a href=\"%s\" target=\"_blank\"> ドキュメント </a> をお読みください。"
+
+#: includes/acf-bidirectional-functions.php:252
+msgid "Select field(s) to store the reference back to the item being updated. You may select this field. Target fields must be compatible with where this field is being displayed. For example, if this field is displayed on a Taxonomy, your target field should be of type Taxonomy"
+msgstr "更新されるアイテムへの参照を保存するフィールドを選択します。このフィールド自身を選択することもできます。ターゲットに設定するフィールドは、このフィールドが表示される場所 (投稿、タクソノミー、またはユーザー) に対応している必要があります。例えば、このフィールドがタクソノミーに表示される場合、ターゲットフィールドはタクソノミー型でなければなりません。"
 
 #: includes/fields/class-acf-field-page_link.php:511
 #: includes/fields/class-acf-field-post_object.php:424

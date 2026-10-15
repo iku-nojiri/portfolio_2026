@@ -32,7 +32,7 @@ export const postDataAdapter = {
   worksPost: (post: WorksPost) => {
     return {
       slug: post.slug,
-      techStack: post._embedded["wp:term"][0].map((term) => term.name),
+      techStack: post._embedded?.["wp:term"]?.[0]?.map((term) => term.name) ?? [],
       date: formatDate(post.date),
       title: post.title.rendered,
       category: post.acf.category,

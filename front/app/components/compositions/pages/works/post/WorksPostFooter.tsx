@@ -22,7 +22,7 @@ export const WorksPostFooter = ({ posts }: Props) => {
           </Heading>
           <Grid col={3} className="mt-8">
             {posts.map((post) => (
-              <WorksCard {...postDataAdapter.worksPost(post)} />
+              <WorksCard key={post.slug} {...postDataAdapter.worksPost(post)} />
             ))}
           </Grid>
         </>
