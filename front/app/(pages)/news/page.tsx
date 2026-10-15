@@ -8,6 +8,7 @@ import { NewsCard } from "@/app/components/compositions/pages/news/NewsCard";
 import { usePostData } from "@/app/hooks/usePostData";
 import type { NewsPost } from "@/app/types/NewsPost.type";
 import { postDataAdapter } from "@/app/libs/postDataAdapter";
+import { Loading } from "@/app/components/features/loading";
 
 export default function Skills() {
   const data = usePostData<NewsPost>("news");
@@ -20,16 +21,13 @@ export default function Skills() {
       </Container>
       {/* news */}
       <Container size="lg">
-        <Grid col={1}>
-          {data ? (
-            data.map((post) => (
-              <NewsCard
-                key={post.id}
-                {...postDataAdapter.newsPost(post)}
-              />
-            ))
-          ) : null}
-        </Grid>
+        {data ? (
+          <Grid col={1}>
+            {data.map((post) => (
+              <NewsCard key={post.id} {...postDataAdapter.newsPost(post)} />
+            ))}
+          </Grid>
+        ) : <Loading />}
       </Container>
     </>
   );

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { NAV_MAP } from "../../constants/NAV_MAP";
 import { Container } from "../../components/premitives/Container";
@@ -8,6 +8,7 @@ import { WorksCard } from "@/app/components/compositions/pages/works/WorksCard";
 import { usePostData } from "@/app/hooks/usePostData";
 import type { WorksPost } from "@/app/types/WorksPost.type";
 import { postDataAdapter } from "@/app/libs/postDataAdapter";
+import { Loading } from "@/app/components/features/loading";
 
 export default function Works() {
   const data = usePostData<WorksPost>("works");
@@ -20,13 +21,15 @@ export default function Works() {
       </Container>
       {/* works */}
       <Container as="section" size="lg">
-        <Grid as="ul">
-          {data
-            ? data.map((post) => (
+        <Container as="section" size="lg">
+          {data ? (
+            <Grid as="ul">
+              {data.map((post) => (
                 <WorksCard key={post.id} {...postDataAdapter.worksPost(post)} />
-              ))
-            : null}
-        </Grid>
+              ))}
+            </Grid>
+          ) : <Loading />}
+        </Container>
       </Container>
     </>
   );
