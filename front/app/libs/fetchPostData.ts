@@ -4,7 +4,7 @@ const config = {
   wpHost:
     process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test"
       ? "http://localhost:8080"
-      : "http://nojiri.tech/",
+      : "http://nojiri.tech/wp/",
   apiEntryPoint: "wp-json/wp/v2",
   param: "?_embed&acf_format=standard"
 };
