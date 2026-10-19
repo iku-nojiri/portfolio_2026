@@ -28,6 +28,8 @@ export default function Contents() {
     if (!slug || !thisPost) {
       router.replace("/works/");
     }
+     // ページ遷移時の位置のずれをリセットする
+    scroll(0, 0)
   }, [data, slug, thisPost, router]);
 
   if (!thisPost) return null;

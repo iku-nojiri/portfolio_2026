@@ -21,15 +21,15 @@ export default function Works() {
       </Container>
       {/* works */}
       <Container as="section" size="lg">
-        <Container as="section" size="lg">
-          {data ? (
-            <Grid as="ul">
-              {data.map((post) => (
-                <WorksCard key={post.id} {...postDataAdapter.worksPost(post)} />
-              ))}
-            </Grid>
-          ) : <Loading />}
-        </Container>
+        {data ? (
+          <Grid as="ul">
+            {data.map((post) => (
+              <WorksCard key={post.id} {...postDataAdapter.worksPost(post)} />
+            ))}
+          </Grid>
+        ) : (
+          <Loading />
+        )}
       </Container>
     </>
   );

@@ -8,7 +8,7 @@ import { DrawerNav } from "./DrawerNav";
 
 export const Drawer = () => {
   const menuContent = useRef<HTMLDivElement | null>(null);
-  const { isOpen, isPc } = useContext(DrawerContext);
+  const { isOpen, toggleOpen, isPc } = useContext(DrawerContext);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -32,11 +32,26 @@ export const Drawer = () => {
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        toggleOpen();
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen]);
+
   return (
     <Menu
       id="drawer"
       right
-      // noTransition
       isOpen={isOpen}
       pageWrapId="burgerWrap"
       outerContainerId="burgerOuterContainer"
@@ -45,6 +60,7 @@ export const Drawer = () => {
       itemListElement="div"
       className="bg-bg"
       width={isPc ? 350 : 300}
+      disableCloseOnEsc
     >
       <div ref={menuContent}>
         <DrawerHeader />
