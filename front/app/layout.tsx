@@ -12,6 +12,9 @@ const { robotoFlex, notoSansJP } = FONTS;
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "My Portfolio",
+  icons: {
+    icon: "/favicon.ico",
+  },
   robots: {
     index: false,
     follow: false,
